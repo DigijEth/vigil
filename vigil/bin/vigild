@@ -133,17 +133,52 @@ main() {
         "$VIGIL_LIB/network_monitor.sh" install >> "$VIGIL_LOG" 2>&1
     fi
 
-    # 5. Run initial scan
+    # 5. Deep scan background monitor (low-priority forensic analysis)
+    if [ "${DEEP_SCAN_BACKGROUND:-1}" = "1" ]; then
+        log INFO "Starting deep scan background monitor..."
+        "$VIGIL_LIB/deep_scan.sh" background >> "$VIGIL_LOG" 2>&1 &
+        log INFO "Deep Scan Background PID: $!"
+    fi
+
+    # 6. SMS Honeypot (fake location on silent SMS)
+    if [ "${SMS_FAKE_RESPONSE:-0}" = "1" ]; then
+        log INFO "Starting SMS Honeypot monitor..."
+        "$VIGIL_LIB/sms_honeypot.sh" monitor >> "$VIGIL_LOG" 2>&1 &
+        log INFO "SMS Honeypot PID: $!"
+    fi
+
+    # 7. Duress trigger monitors (power button + PIN)
+    if [ "${DURESS_ENABLED:-0}" = "1" ]; then
+        log INFO "Starting Duress monitors..."
+        "$VIGIL_LIB/duress.sh" monitor >> "$VIGIL_LOG" 2>&1 &
+        log INFO "Duress Monitor PID: $!"
+    fi
+
+    # 8. Apply anti-forensics hardening on boot
+    if [ "${ANTIFORENSICS_ENABLED:-1}" = "1" ]; then
+        log INFO "Applying anti-forensics hardening..."
+        "$VIGIL_LIB/antiforensics.sh" harden >> "$VIGIL_LOG" 2>&1
+    fi
+
+    # 9. Install network blocklists
+    if [ "${NETWORK_BLOCK_C2:-1}" = "1" ] || [ "${NETWORK_BLOCK_TRACKERS:-1}" = "1" ]; then
+        log INFO "Installing network blocklists..."
+        "$VIGIL_LIB/network_monitor.sh" install >> "$VIGIL_LOG" 2>&1
+    fi
+
+    # 10. Run initial quick scan
     log INFO "Running initial quick scan..."
     "$VIGIL_LIB/scanner.sh" quick >> "$VIGIL_LOG" 2>&1
 
     # ── Main loop ──
     local last_scan=$(date +%s)
     local last_integrity=$(date +%s)
+    local last_ioc_update=$(date +%s)
     local scan_interval="${SCANNER_INTERVAL:-3600}"
     local integrity_interval="${FROSTGUARD_INTERVAL:-1800}"
+    local ioc_update_interval="${IOC_UPDATE_INTERVAL:-86400}"
 
-    log INFO "Entering main loop (scan: ${scan_interval}s, integrity: ${integrity_interval}s)"
+    log INFO "Entering main loop (scan: ${scan_interval}s, integrity: ${integrity_interval}s, ioc: ${ioc_update_interval}s)"
 
     while true; do
         local now=$(date +%s)
@@ -160,6 +195,13 @@ main() {
             log INFO "Running scheduled integrity check..."
             "$VIGIL_LIB/integrity.sh" verify >> "$VIGIL_LOG" 2>&1
             last_integrity=$now
+        fi
+
+        # Periodic IOC auto-update
+        if [ $((now - last_ioc_update)) -ge "$ioc_update_interval" ]; then
+            log INFO "Checking for IOC updates..."
+            "$VIGIL_LIB/ioc_updater.sh" auto >> "$VIGIL_LOG" 2>&1
+            last_ioc_update=$now
         fi
 
         # Process any pending alerts

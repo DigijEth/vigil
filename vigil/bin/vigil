@@ -186,29 +186,7 @@ cmd_alerts() {
 
 cmd_update_ioc() {
     check_module
-    echo "Updating threat indicators..."
-
-    if [ -n "$VIGIL_BACKEND_URL" ]; then
-        # Download from backend
-        for f in packages.txt certificates.txt domains.txt ips.txt hashes.txt hosts.txt cellebrite_hashes.txt; do
-            echo -n "  $f... "
-            if curl -sf -o "$VIGIL_DATA/$f.new" "$VIGIL_BACKEND_URL/ioc/$f"; then
-                mv "$VIGIL_DATA/$f.new" "$VIGIL_DATA/$f"
-                echo "${GREEN}updated${NC}"
-            else
-                rm -f "$VIGIL_DATA/$f.new"
-                echo "${YELLOW}failed (keeping current)${NC}"
-            fi
-        done
-
-        # Reinstall hosts blocklist
-        "$VIGIL_LIB/network_monitor.sh" install
-        echo "IOC update complete"
-    else
-        echo "${YELLOW}No backend URL configured${NC}"
-        echo "Set VIGIL_BACKEND_URL in /data/adb/vigil/vigil.conf"
-        echo "Or manually update files in /data/adb/vigil/"
-    fi
+    "$VIGIL_LIB/ioc_updater.sh" update
 }
 
 cmd_forensic() {
@@ -243,35 +221,86 @@ cmd_wipe_session() {
     "$VIGIL_LIB/key_wiper.sh" wipe-session
 }
 
+cmd_deep_scan() {
+    check_module
+    "$VIGIL_LIB/deep_scan.sh" deep
+}
+
+cmd_harden() {
+    check_module
+    local subcmd="${1:-harden}"
+    "$VIGIL_LIB/antiforensics.sh" "$subcmd"
+}
+
+cmd_duress() {
+    check_module
+    local subcmd="${1:-status}"
+    "$VIGIL_LIB/duress.sh" "$subcmd"
+}
+
+cmd_panic() {
+    check_module
+    "$VIGIL_LIB/duress.sh" panic
+}
+
+cmd_honeypot() {
+    check_module
+    local subcmd="${1:-status}"
+    shift 2>/dev/null
+    "$VIGIL_LIB/sms_honeypot.sh" "$subcmd" "$@"
+}
+
+cmd_app_honeypot() {
+    check_module
+    local subcmd="${1:-audit}"
+    shift 2>/dev/null
+    "$VIGIL_LIB/app_honeypot.sh" "$subcmd" "$@"
+}
+
+cmd_sanitize() {
+    check_module
+    "$VIGIL_LIB/antiforensics.sh" sanitize
+}
+
 cmd_help() {
     print_banner
     echo "Usage: vigil <command> [options]"
     echo ""
     echo "${BOLD}Core Commands${NC}"
-    echo "  status             Show overall protection status"
-    echo "  scan [full|quick]  Run threat scan (default: full)"
-    echo "  alerts [N]         Show last N alerts (default: 20)"
-    echo "  log [N]            Show last N log lines (default: 50)"
+    echo "  status              Show overall protection status"
+    echo "  scan [full|quick]   Run threat scan (default: full)"
+    echo "  deep-scan           Full forensic analysis (MVT-style)"
+    echo "  alerts [N]          Show last N alerts (default: 20)"
+    echo "  log [N]             Show last N log lines (default: 50)"
     echo ""
     echo "${BOLD}Protection${NC}"
-    echo "  lockdown [-f]      Enter BFU lockdown mode (evict keys, disable ADB)"
-    echo "  unlock             Clear lockdown state (after reboot)"
-    echo "  wipe-session       Clear session data (clipboard, caches)"
+    echo "  lockdown [-f]       Enter BFU lockdown mode (evict keys, disable ADB)"
+    echo "  panic               Immediate duress action (no confirmation)"
+    echo "  unlock              Clear lockdown state (after reboot)"
+    echo "  wipe-session        Clear session data (clipboard, caches)"
+    echo "  harden [audit]      Apply anti-forensics hardening (or audit)"
+    echo "  sanitize            Clean forensic artifacts from device"
     echo ""
     echo "${BOLD}Modules${NC}"
     echo "  integrity [baseline|verify|heuristic]"
-    echo "                     FrostGuard file integrity operations"
+    echo "                      FrostGuard file integrity operations"
     echo "  forensic [scan|status]"
-    echo "                     Forensic Shield (anti-Cellebrite)"
+    echo "                      Forensic Shield (anti-Cellebrite)"
     echo "  sms [monitor|analyze|status]"
-    echo "                     SMS Shield (silent SMS detection)"
+    echo "                      SMS Shield (silent SMS detection)"
+    echo "  honeypot [monitor|spoof|spoof-at|stop|status]"
+    echo "                      SMS Honeypot (fake GPS on silent SMS)"
+    echo "  app [audit|revoke|sandbox|feed|auto|status]"
+    echo "                      App Permissions Honeypot (data redirect)"
     echo "  network [install|remove|status]"
-    echo "                     Network monitor (C2/tracker blocking)"
+    echo "                      Network monitor (C2/tracker blocking)"
+    echo "  duress [setup|status]"
+    echo "                      Duress/panic trigger configuration"
     echo ""
     echo "${BOLD}Maintenance${NC}"
-    echo "  update-ioc         Update threat indicator database"
-    echo "  version            Show version"
-    echo "  help               Show this help"
+    echo "  update-ioc          Update threat indicator database"
+    echo "  version             Show version"
+    echo "  help                Show this help"
     echo ""
 }
 
@@ -282,15 +311,22 @@ check_root
 case "$1" in
     status)       cmd_status ;;
     scan)         shift; cmd_scan "$@" ;;
+    deep-scan)    cmd_deep_scan ;;
     integrity)    shift; cmd_integrity "$@" ;;
     lockdown)     shift; cmd_lockdown "$@" ;;
+    panic)        cmd_panic ;;
     unlock)       cmd_unlock ;;
     wipe-session) cmd_wipe_session ;;
+    harden)       shift; cmd_harden "$@" ;;
+    sanitize)     cmd_sanitize ;;
     alerts)       shift; cmd_alerts "$@" ;;
     update-ioc)   cmd_update_ioc ;;
     forensic)     shift; cmd_forensic "$@" ;;
     sms)          shift; cmd_sms "$@" ;;
+    honeypot)     shift; cmd_honeypot "$@" ;;
+    app)          shift; cmd_app_honeypot "$@" ;;
     network)      shift; cmd_network "$@" ;;
+    duress)       shift; cmd_duress "$@" ;;
     log)          shift; cmd_log "$@" ;;
     version)      echo "Vigil v${VERSION}" ;;
     help|--help|-h|"") cmd_help ;;

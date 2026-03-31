@@ -36,6 +36,26 @@ WRAPPER
     chmod 755 /data/local/tmp/vigil
 }
 
+# Generate file integrity baseline if needed (deferred from install)
+if [ -f "$VIGIL_DATA/.needs_baseline" ]; then
+    log_vigil "Generating file integrity baseline in background..."
+    (
+        "$MODDIR/vigil/lib/integrity.sh" baseline >> "$VIGIL_LOG" 2>&1
+        rm -f "$VIGIL_DATA/.needs_baseline"
+        log_vigil "File integrity baseline complete"
+    ) &
+fi
+
+# Run deferred threat scan if requested during install
+if [ -f "$VIGIL_DATA/.needs_scan" ]; then
+    log_vigil "Running deferred threat scan in background..."
+    (
+        "$MODDIR/vigil/lib/scanner.sh" quick >> "$VIGIL_LOG" 2>&1
+        rm -f "$VIGIL_DATA/.needs_scan"
+        log_vigil "Deferred threat scan complete"
+    ) &
+fi
+
 # Start the main daemon
 log_vigil "Starting vigild daemon"
 nohup "$VIGIL_BIN/vigild" >> "$VIGIL_LOG" 2>&1 &
