@@ -1,0 +1,181 @@
+#!/system/bin/sh
+# vigild — Vigil Anti-Surveillance Daemon
+# Main daemon that orchestrates all protection modules
+# (c) Setec Labs
+
+MODDIR=$(dirname $(dirname $(dirname $(readlink -f "$0"))))
+VIGIL_DATA="/data/adb/vigil"
+VIGIL_LIB="$MODDIR/vigil/lib"
+VIGIL_LOG="$VIGIL_DATA/vigil.log"
+VIGIL_PID="$VIGIL_DATA/vigild.pid"
+
+# Ensure dirs exist
+mkdir -p "$VIGIL_DATA/alerts" "$VIGIL_DATA/baseline"
+
+# Load config
+[ -f "$VIGIL_DATA/vigil.conf" ] && . "$VIGIL_DATA/vigil.conf"
+
+log() {
+    local level="$1"
+    local msg="$2"
+    local min_level="${VIGIL_LOG_LEVEL:-2}"
+
+    case "$level" in
+        ERROR) lvl=1 ;;
+        WARN)  lvl=2 ;;
+        INFO)  lvl=3 ;;
+        DEBUG) lvl=4 ;;
+        *)     lvl=3 ;;
+    esac
+
+    [ $lvl -le $min_level ] && \
+        echo "[$(date '+%Y-%m-%d %H:%M:%S')] [vigild] [$level] $msg" >> "$VIGIL_LOG"
+}
+
+rotate_log() {
+    local max_size="${VIGIL_LOG_MAX_SIZE:-1048576}"
+    if [ -f "$VIGIL_LOG" ]; then
+        local size=$(stat -c '%s' "$VIGIL_LOG" 2>/dev/null || echo 0)
+        if [ "$size" -gt "$max_size" ]; then
+            mv "$VIGIL_LOG" "$VIGIL_LOG.1"
+            log INFO "Log rotated"
+        fi
+    fi
+}
+
+process_alerts() {
+    local alert_file="$VIGIL_DATA/alerts/pending"
+    if [ -f "$alert_file" ] && [ -s "$alert_file" ]; then
+        local count=$(wc -l < "$alert_file")
+        log WARN "Processing $count pending alerts"
+
+        # Archive alerts
+        cat "$alert_file" >> "$VIGIL_DATA/alerts/history"
+
+        # If backend configured, report alerts
+        if [ -n "$VIGIL_BACKEND_URL" ]; then
+            # POST alerts to backend server
+            local payload=$(cat "$alert_file" | while IFS='|' read -r sev ts mod msg; do
+                echo "{\"severity\":\"$sev\",\"timestamp\":$ts,\"module\":\"$mod\",\"message\":\"$msg\"}"
+            done | paste -sd',' -)
+
+            curl -s -X POST \
+                -H "Content-Type: application/json" \
+                -H "X-Vigil-Device: ${VIGIL_DEVICE_ID:-unknown}" \
+                -d "{\"alerts\":[$payload]}" \
+                "$VIGIL_BACKEND_URL/api/alerts" \
+                >> "$VIGIL_LOG" 2>&1 &
+        fi
+
+        # Clear pending
+        > "$alert_file"
+    fi
+}
+
+generate_device_id() {
+    if [ -z "$VIGIL_DEVICE_ID" ] || [ "$VIGIL_DEVICE_ID" = "" ]; then
+        # Generate a pseudorandom device ID (not fingerprinting — just for backend comms)
+        VIGIL_DEVICE_ID=$(cat /proc/sys/kernel/random/uuid 2>/dev/null | cut -d'-' -f1-2)
+        if [ -n "$VIGIL_DEVICE_ID" ]; then
+            sed -i "s/^VIGIL_DEVICE_ID=.*/VIGIL_DEVICE_ID=\"$VIGIL_DEVICE_ID\"/" "$VIGIL_DATA/vigil.conf" 2>/dev/null
+        fi
+    fi
+}
+
+# ── SIGNAL HANDLERS ──
+cleanup() {
+    log INFO "vigild shutting down (PID: $$)"
+    # Stop background monitors
+    kill $(jobs -p) 2>/dev/null
+    rm -f "$VIGIL_PID"
+    exit 0
+}
+
+trap cleanup TERM INT QUIT
+
+# ── MAIN ──
+main() {
+    echo $$ > "$VIGIL_PID"
+    log INFO "════════════════════════════════════════"
+    log INFO "vigild starting (PID: $$)"
+    log INFO "Module: $MODDIR"
+    log INFO "Data:   $VIGIL_DATA"
+    log INFO "════════════════════════════════════════"
+
+    generate_device_id
+
+    # ── Start background monitors ──
+
+    # 1. Forensic Shield (continuous USB/process monitoring)
+    if [ "${FORENSIC_SHIELD_ENABLED:-1}" = "1" ]; then
+        log INFO "Starting Forensic Shield monitor..."
+        "$VIGIL_LIB/forensic_shield.sh" monitor >> "$VIGIL_LOG" 2>&1 &
+        log INFO "Forensic Shield PID: $!"
+    fi
+
+    # 2. SMS Shield (continuous logcat monitoring)
+    if [ "${SMS_SHIELD_ENABLED:-1}" = "1" ] && [ "${SMS_SILENT_DETECT:-1}" = "1" ]; then
+        log INFO "Starting SMS Shield monitor..."
+        "$VIGIL_LIB/sms_shield.sh" monitor >> "$VIGIL_LOG" 2>&1 &
+        log INFO "SMS Shield PID: $!"
+    fi
+
+    # 3. Network Monitor (continuous connection watching)
+    if [ "${NETWORK_MONITOR_ENABLED:-1}" = "1" ] && [ "${NETWORK_LOG_SUSPICIOUS:-1}" = "1" ]; then
+        log INFO "Starting Network monitor..."
+        "$VIGIL_LIB/network_monitor.sh" monitor >> "$VIGIL_LOG" 2>&1 &
+        log INFO "Network Monitor PID: $!"
+    fi
+
+    # 4. Install network blocklists
+    if [ "${NETWORK_BLOCK_C2:-1}" = "1" ] || [ "${NETWORK_BLOCK_TRACKERS:-1}" = "1" ]; then
+        log INFO "Installing network blocklists..."
+        "$VIGIL_LIB/network_monitor.sh" install >> "$VIGIL_LOG" 2>&1
+    fi
+
+    # 5. Run initial scan
+    log INFO "Running initial quick scan..."
+    "$VIGIL_LIB/scanner.sh" quick >> "$VIGIL_LOG" 2>&1
+
+    # ── Main loop ──
+    local last_scan=$(date +%s)
+    local last_integrity=$(date +%s)
+    local scan_interval="${SCANNER_INTERVAL:-3600}"
+    local integrity_interval="${FROSTGUARD_INTERVAL:-1800}"
+
+    log INFO "Entering main loop (scan: ${scan_interval}s, integrity: ${integrity_interval}s)"
+
+    while true; do
+        local now=$(date +%s)
+
+        # Periodic threat scan
+        if [ $((now - last_scan)) -ge "$scan_interval" ]; then
+            log INFO "Running scheduled threat scan..."
+            "$VIGIL_LIB/scanner.sh" quick >> "$VIGIL_LOG" 2>&1
+            last_scan=$now
+        fi
+
+        # Periodic integrity check
+        if [ "${FROSTGUARD_ENABLED:-1}" = "1" ] && [ $((now - last_integrity)) -ge "$integrity_interval" ]; then
+            log INFO "Running scheduled integrity check..."
+            "$VIGIL_LIB/integrity.sh" verify >> "$VIGIL_LOG" 2>&1
+            last_integrity=$now
+        fi
+
+        # Process any pending alerts
+        process_alerts
+
+        # Rotate log if needed
+        rotate_log
+
+        # Check if we're still supposed to be running
+        if [ ! -f "$VIGIL_PID" ] || [ "$(cat "$VIGIL_PID" 2>/dev/null)" != "$$" ]; then
+            log WARN "PID file mismatch — another instance may be running. Exiting."
+            cleanup
+        fi
+
+        sleep 60
+    done
+}
+
+main

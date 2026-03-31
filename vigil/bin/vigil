@@ -1,0 +1,302 @@
+#!/system/bin/sh
+# vigil — Vigil Anti-Surveillance Shield CLI
+# Command-line interface for managing Vigil protection
+# (c) Setec Labs
+
+VERSION="0.1.0"
+MODDIR=""
+VIGIL_DATA="/data/adb/vigil"
+
+# Find module directory
+for d in /data/adb/modules/vigil /data/adb/modules_update/vigil; do
+    [ -d "$d/vigil/lib" ] && MODDIR="$d" && break
+done
+
+VIGIL_LIB="${MODDIR:+$MODDIR/vigil/lib}"
+VIGIL_LOG="$VIGIL_DATA/vigil.log"
+
+# Colors (if terminal supports it)
+if [ -t 1 ]; then
+    RED='\033[0;31m'
+    GREEN='\033[0;32m'
+    YELLOW='\033[0;33m'
+    CYAN='\033[0;36m'
+    BOLD='\033[1m'
+    NC='\033[0m'
+else
+    RED="" GREEN="" YELLOW="" CYAN="" BOLD="" NC=""
+fi
+
+print_banner() {
+    echo "${BOLD}"
+    echo " ╔══════════════════════════════════════╗"
+    echo " ║   Vigil — Anti-Surveillance Shield   ║"
+    echo " ║          by Setec Labs v${VERSION}        ║"
+    echo " ╚══════════════════════════════════════╝"
+    echo "${NC}"
+}
+
+check_root() {
+    if [ "$(id -u)" != "0" ]; then
+        echo "${RED}Error: Vigil requires root access${NC}"
+        echo "Run: su -c vigil $*"
+        exit 1
+    fi
+}
+
+check_module() {
+    if [ -z "$VIGIL_LIB" ] || [ ! -d "$VIGIL_LIB" ]; then
+        echo "${RED}Error: Vigil module not found${NC}"
+        echo "Is the KernelSU module installed and enabled?"
+        exit 1
+    fi
+}
+
+daemon_running() {
+    if [ -f "$VIGIL_DATA/vigild.pid" ]; then
+        local pid=$(cat "$VIGIL_DATA/vigild.pid")
+        kill -0 "$pid" 2>/dev/null && return 0
+    fi
+    return 1
+}
+
+# ── COMMANDS ──
+
+cmd_status() {
+    print_banner
+    echo "${BOLD}Protection Status${NC}"
+    echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+
+    # Daemon
+    if daemon_running; then
+        local pid=$(cat "$VIGIL_DATA/vigild.pid")
+        echo "  Daemon:          ${GREEN}RUNNING${NC} (PID: $pid)"
+    else
+        echo "  Daemon:          ${RED}STOPPED${NC}"
+    fi
+
+    # Lockdown
+    if [ -f "$VIGIL_DATA/.lockdown" ]; then
+        echo "  Mode:            ${RED}LOCKDOWN${NC}"
+    else
+        echo "  Mode:            ${GREEN}Normal${NC}"
+    fi
+
+    # Load config for status display
+    [ -f "$VIGIL_DATA/vigil.conf" ] && . "$VIGIL_DATA/vigil.conf"
+
+    echo ""
+    echo "${BOLD}Modules${NC}"
+    echo "  Threat Scanner:  $([ "${SCANNER_ENABLED:-1}" = "1" ] && echo "${GREEN}ON${NC}" || echo "${RED}OFF${NC}")"
+    echo "  FrostGuard:      $([ "${FROSTGUARD_ENABLED:-1}" = "1" ] && echo "${GREEN}ON${NC}" || echo "${RED}OFF${NC}")"
+    echo "  Forensic Shield: $([ "${FORENSIC_SHIELD_ENABLED:-1}" = "1" ] && echo "${GREEN}ON${NC}" || echo "${RED}OFF${NC}")"
+    echo "  SMS Shield:      $([ "${SMS_SHIELD_ENABLED:-1}" = "1" ] && echo "${GREEN}ON${NC}" || echo "${RED}OFF${NC}")"
+    echo "  Network Monitor: $([ "${NETWORK_MONITOR_ENABLED:-1}" = "1" ] && echo "${GREEN}ON${NC}" || echo "${RED}OFF${NC}")"
+    echo "  Key Wiper:       $([ "${KEYWIPER_ENABLED:-1}" = "1" ] && echo "${GREEN}ON${NC}" || echo "${RED}OFF${NC}")"
+
+    # IOC stats
+    echo ""
+    echo "${BOLD}Threat Database${NC}"
+    for f in packages.txt certificates.txt domains.txt ips.txt hashes.txt cellebrite_hashes.txt; do
+        if [ -f "$VIGIL_DATA/$f" ]; then
+            local count=$(wc -l < "$VIGIL_DATA/$f")
+            local name=$(echo "$f" | sed 's/\.txt//' | sed 's/_/ /g')
+            printf "  %-18s %s indicators\n" "$name:" "$count"
+        fi
+    done
+
+    # Recent alerts
+    echo ""
+    echo "${BOLD}Recent Alerts${NC}"
+    if [ -f "$VIGIL_DATA/alerts/history" ]; then
+        local total=$(wc -l < "$VIGIL_DATA/alerts/history")
+        echo "  Total: $total"
+        echo ""
+        tail -5 "$VIGIL_DATA/alerts/history" | while IFS='|' read -r sev ts mod msg; do
+            local date=$(date -d @"$ts" '+%m/%d %H:%M' 2>/dev/null || echo "$ts")
+            case "$sev" in
+                CRITICAL) echo "  ${RED}[$sev]${NC} $date $msg" ;;
+                HIGH)     echo "  ${YELLOW}[$sev]${NC} $date $msg" ;;
+                *)        echo "  [$sev] $date $msg" ;;
+            esac
+        done
+    else
+        echo "  ${GREEN}No alerts${NC}"
+    fi
+    echo ""
+}
+
+cmd_scan() {
+    check_module
+    local scan_type="${1:-full}"
+    "$VIGIL_LIB/scanner.sh" "$scan_type"
+}
+
+cmd_integrity() {
+    check_module
+    local subcmd="${1:-verify}"
+    "$VIGIL_LIB/integrity.sh" "$subcmd"
+}
+
+cmd_lockdown() {
+    check_module
+    echo "${RED}${BOLD}WARNING: This will enter BFU lockdown mode.${NC}"
+    echo "Actions: evict encryption keys, disable ADB, TRIM storage, minimize logging"
+    echo "A reboot is required to restore normal operation."
+    echo ""
+
+    # In non-interactive mode (e.g., from duress trigger), skip confirmation
+    if [ "$1" = "--force" ] || [ "$1" = "-f" ]; then
+        "$VIGIL_LIB/key_wiper.sh" lockdown
+        return
+    fi
+
+    echo -n "Proceed? [y/N] "
+    read -r confirm
+    if [ "$confirm" = "y" ] || [ "$confirm" = "Y" ]; then
+        "$VIGIL_LIB/key_wiper.sh" lockdown
+    else
+        echo "Aborted"
+    fi
+}
+
+cmd_unlock() {
+    check_module
+    "$VIGIL_LIB/key_wiper.sh" unlock
+}
+
+cmd_alerts() {
+    if [ -f "$VIGIL_DATA/alerts/history" ]; then
+        local count="${1:-20}"
+        echo "${BOLD}Alert History${NC} (last $count)"
+        echo "━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━"
+        tail -"$count" "$VIGIL_DATA/alerts/history" | while IFS='|' read -r sev ts mod msg; do
+            local date=$(date -d @"$ts" '+%Y-%m-%d %H:%M:%S' 2>/dev/null || echo "$ts")
+            case "$sev" in
+                CRITICAL) echo "${RED}[$sev]${NC} $date [$mod] $msg" ;;
+                HIGH)     echo "${YELLOW}[$sev]${NC} $date [$mod] $msg" ;;
+                MEDIUM)   echo "${CYAN}[$sev]${NC} $date [$mod] $msg" ;;
+                *)        echo "[$sev] $date [$mod] $msg" ;;
+            esac
+        done
+    else
+        echo "No alerts recorded"
+    fi
+}
+
+cmd_update_ioc() {
+    check_module
+    echo "Updating threat indicators..."
+
+    if [ -n "$VIGIL_BACKEND_URL" ]; then
+        # Download from backend
+        for f in packages.txt certificates.txt domains.txt ips.txt hashes.txt hosts.txt cellebrite_hashes.txt; do
+            echo -n "  $f... "
+            if curl -sf -o "$VIGIL_DATA/$f.new" "$VIGIL_BACKEND_URL/ioc/$f"; then
+                mv "$VIGIL_DATA/$f.new" "$VIGIL_DATA/$f"
+                echo "${GREEN}updated${NC}"
+            else
+                rm -f "$VIGIL_DATA/$f.new"
+                echo "${YELLOW}failed (keeping current)${NC}"
+            fi
+        done
+
+        # Reinstall hosts blocklist
+        "$VIGIL_LIB/network_monitor.sh" install
+        echo "IOC update complete"
+    else
+        echo "${YELLOW}No backend URL configured${NC}"
+        echo "Set VIGIL_BACKEND_URL in /data/adb/vigil/vigil.conf"
+        echo "Or manually update files in /data/adb/vigil/"
+    fi
+}
+
+cmd_forensic() {
+    check_module
+    local subcmd="${1:-scan}"
+    "$VIGIL_LIB/forensic_shield.sh" "$subcmd"
+}
+
+cmd_sms() {
+    check_module
+    local subcmd="${1:-status}"
+    "$VIGIL_LIB/sms_shield.sh" "$subcmd"
+}
+
+cmd_network() {
+    check_module
+    local subcmd="${1:-status}"
+    "$VIGIL_LIB/network_monitor.sh" "$subcmd"
+}
+
+cmd_log() {
+    if [ -f "$VIGIL_LOG" ]; then
+        local lines="${1:-50}"
+        tail -"$lines" "$VIGIL_LOG"
+    else
+        echo "No log file found"
+    fi
+}
+
+cmd_wipe_session() {
+    check_module
+    "$VIGIL_LIB/key_wiper.sh" wipe-session
+}
+
+cmd_help() {
+    print_banner
+    echo "Usage: vigil <command> [options]"
+    echo ""
+    echo "${BOLD}Core Commands${NC}"
+    echo "  status             Show overall protection status"
+    echo "  scan [full|quick]  Run threat scan (default: full)"
+    echo "  alerts [N]         Show last N alerts (default: 20)"
+    echo "  log [N]            Show last N log lines (default: 50)"
+    echo ""
+    echo "${BOLD}Protection${NC}"
+    echo "  lockdown [-f]      Enter BFU lockdown mode (evict keys, disable ADB)"
+    echo "  unlock             Clear lockdown state (after reboot)"
+    echo "  wipe-session       Clear session data (clipboard, caches)"
+    echo ""
+    echo "${BOLD}Modules${NC}"
+    echo "  integrity [baseline|verify|heuristic]"
+    echo "                     FrostGuard file integrity operations"
+    echo "  forensic [scan|status]"
+    echo "                     Forensic Shield (anti-Cellebrite)"
+    echo "  sms [monitor|analyze|status]"
+    echo "                     SMS Shield (silent SMS detection)"
+    echo "  network [install|remove|status]"
+    echo "                     Network monitor (C2/tracker blocking)"
+    echo ""
+    echo "${BOLD}Maintenance${NC}"
+    echo "  update-ioc         Update threat indicator database"
+    echo "  version            Show version"
+    echo "  help               Show this help"
+    echo ""
+}
+
+# ── DISPATCH ──
+
+check_root
+
+case "$1" in
+    status)       cmd_status ;;
+    scan)         shift; cmd_scan "$@" ;;
+    integrity)    shift; cmd_integrity "$@" ;;
+    lockdown)     shift; cmd_lockdown "$@" ;;
+    unlock)       cmd_unlock ;;
+    wipe-session) cmd_wipe_session ;;
+    alerts)       shift; cmd_alerts "$@" ;;
+    update-ioc)   cmd_update_ioc ;;
+    forensic)     shift; cmd_forensic "$@" ;;
+    sms)          shift; cmd_sms "$@" ;;
+    network)      shift; cmd_network "$@" ;;
+    log)          shift; cmd_log "$@" ;;
+    version)      echo "Vigil v${VERSION}" ;;
+    help|--help|-h|"") cmd_help ;;
+    *)
+        echo "Unknown command: $1"
+        echo "Run 'vigil help' for usage"
+        exit 1
+        ;;
+esac

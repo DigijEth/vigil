@@ -1,0 +1,1197 @@
+# Vigil IOC: Malicious/stalkerware Android packages
+# Format: package_name|threat_name|category
+Aktualizacja.apps|Spyone|stalkerware
+YWZiZDFjZTg2NTZlOGI4NDkyYWJjZDJjZDE5ZTM0Mjk.MzkwMmNhZGFiZGZhMjMyZjQzNTJkYmQ1ODg1ZjI1NzA|Observer|stalkerware
+YWZiZDFjZTg2NTZlOGI4NDkyYWJjZDJjZDE5ZTM0Mjk.MzkwMmNhZGFiZGZhMjMyZjQzNTJkYmQ1ODg1ZjI1NzA|Unknown|stalkerware
+a.tck.lvmchi|MobileTrackerFree|stalkerware
+afs.hbmoczc|AndroidPolice|stalkerware
+afs.hbmoczc|MonitorChecker|stalkerware
+ahmyth.mine.king.ahmyth|Ahmyth|stalkerware
+al.puik.cus|CallShowLite|spyware
+and.GuardTrial|MobiStealth|stalkerware
+and.LocatorTrial|MobiStealth|stalkerware
+android.helper.system|celSpy|stalkerware
+android.helper.system|mSpy|stalkerware
+android.sys.process|celSpy|stalkerware
+android.sys.process|mSpy|stalkerware
+apex.hoolom.racecar.app|Apex Race Game|spyware
+apk.keylogger|AndroSpy|stalkerware
+apk.keylogger|RealtimeSpy|stalkerware
+apk.kgl|AndroSpy|stalkerware
+apk.kgl|RealtimeSpy|stalkerware
+apk.kwoapsnde|AndroSpy|stalkerware
+apk.kwoapsnde|RealtimeSpy|stalkerware
+apk.screenshotrecorder|AndroSpy|stalkerware
+apk.screenshotrecorder|RealtimeSpy|stalkerware
+app.EasyLogger|EasyLogger|stalkerware
+app.Easylogger|EasyLogger|stalkerware
+app.Elogger|EasyLogger|stalkerware
+app.childsafetytracker|EasyLogger|stalkerware
+app.cybrook.trackvieo|TrackView|stalkerware
+app.cybrook.trackviep|TrackView|stalkerware
+app.cybrook.trackvieq|TrackView|stalkerware
+app.cybrook.trackvier|TrackView|stalkerware
+app.cybrook.trackvies|TrackView|stalkerware
+app.cybrook.trackviet|TrackView|stalkerware
+app.cybrook.trackvieu|TrackView|stalkerware
+app.cybrook.trackviev|TrackView|stalkerware
+app.cybrook.trackview|TrackView|stalkerware
+app.cybrook.trackviex|TrackView|stalkerware
+app.cybrook.trackviey|TrackView|stalkerware
+app.cybrook.trackviez|TrackView|stalkerware
+app.cybrook.trustserv|TrackView|stalkerware
+app.lifecircle|TrackView|stalkerware
+app.seniorsafety|EasyLogger|stalkerware
+app.spy24.spy24installer|Spy24|stalkerware
+app.spy24.systemwifi|Spy24|stalkerware
+app.trackview.pro|TrackView|stalkerware
+app.trackview|TrackView|stalkerware
+br.com.appfornecedor.legal|MeuSpy|stalkerware
+br.com.cloud.aplicativo|MeuSpy|stalkerware
+br.com.cloud.backup|MeuSpy|stalkerware
+br.com.daggers.gameap|MeuSpy|stalkerware
+br.com.daggers.toshtec|MeuSpy|stalkerware
+br.com.eaglespy|eagleSPY|stalkerware
+br.com.galaxys.gameap|MeuSpy|stalkerware
+br.com.gamelevel.cloudv3|MeuSpy|stalkerware
+br.com.gamelevel.playstart|MeuSpy|stalkerware
+br.com.maceda.android.antifurtow|AntiFurtoDroid|stalkerware
+br.com.monsthers.gameap|MeuSpy|stalkerware
+br.com.phonecell.cloud1|MeuSpy|stalkerware
+br.com.phonecell.go5ge|MeuSpy|stalkerware
+br.com.phonecell.maps|MeuSpy|stalkerware
+br.com.phonecell.radio|MeuSpy|stalkerware
+br.com.phonecell.services|MeuSpy|stalkerware
+br.com.rastreadordenamorado|RastreadorDeNamorado|stalkerware
+br.com.rastreadordenamorado|Unknown|stalkerware
+br.com.sistema.aplicativo|MeuSpy|stalkerware
+bv.vemzye|AndroidPolice|stalkerware
+bv.vemzye|MonitorChecker|stalkerware
+callerscreen.paper.ringshow|CallerPaper Show|spyware
+city.russ.alltrackercorp|AllTracker|stalkerware
+city.russ.alltrackerfamily|AllTracker|stalkerware
+city.russ.alltrackerinstaller|AllTracker|stalkerware
+cmf0.c3b5bm90zq.patch|Hoverwatch|stalkerware
+cn.trackview.shentan|TrackView|stalkerware
+com.AwamiSolution.smartkeylogger|Hiddad|stalkerware
+com.AwamiSolution.smartkeylogger|SmartKeylogger|stalkerware
+com.HalogenElement.Frame.TrainPhotoFrame|Train Photo Frame|spyware
+com.Pixa.PhotoEditor.PicsArt.CollageMaker.Lightroom.PhotoLab.PixelLab.Pixlr|Pixa: Photo Editor & Collage Maker|spyware
+com.USIB.Child.ChildControl|Mitbe|stalkerware
+com.Videoeditortfs.pro|Video Editor 2021|spyware
+com.abs.provideo_editor|Video Converter Master|spyware
+com.accountable2you.ap1|Unknown|stalkerware
+com.acetoon.studio.facephoto|Acetoon Photo Cartoon|spyware
+com.addtextcoon.shapermoter|Photo Frame PIP Collage Maker|spyware
+com.adonarusso.daily.horoscope|ZodiHoroscope - Fortune Finder|spyware
+com.ads.optimization|Ad Optimization Meta|spyware
+com.ads_manager_helper|Ads Manager Helper|spyware
+com.adsagency.socialmng|Ad Manager For Social|spyware
+com.afreesmstracker.app|AppSpy|stalkerware
+com.agehohn.fpsgame.app|Agent John FPS Game|spyware
+com.agpstracker.app|AppSpy|stalkerware
+com.aif.tracksp|AiSpyer|stalkerware
+com.aisistem.instalao|MeuSpy|stalkerware
+com.aixlunro.uqfhkagb|AndroidPolice|stalkerware
+com.aixlunro.uqfhkagb|KidLogger|stalkerware
+com.aiyi.admin|Cocospy|stalkerware
+com.ajygpxjy.bnthtjou|AndroidPolice|stalkerware
+com.ajygpxjy.bnthtjou|Unknown|stalkerware
+com.alienmanfc6.wheresmyandroid|WheresMyDroid|stalkerware
+com.allsite.unlo|Unblocked Website|spyware
+com.amazcam.apbest|Best Fun Cam|spyware
+com.amazing.psychologyfacts|Psychology Facts|spyware
+com.amon|AndroidPolice|stalkerware
+com.amon|MonitorChecker|stalkerware
+com.androdid.inteernet.aa21111227|MobileTrackerFree|stalkerware
+com.android.core.mngi|Snoopza|stalkerware
+com.android.core.mngj|Snoopza|stalkerware
+com.android.core.mngk|Snoopza|stalkerware
+com.android.core.mngl|Snoopza|stalkerware
+com.android.core.mngn|Snoopza|stalkerware
+com.android.core.mngo|Snoopza|stalkerware
+com.android.core.mngp|Snoopza|stalkerware
+com.android.core.mngq|Snoopza|stalkerware
+com.android.core.mngr|Snoopza|stalkerware
+com.android.core.mngs|Snoopza|stalkerware
+com.android.core.mngt|Snoopza|stalkerware
+com.android.core.mngu|Snoopza|stalkerware
+com.android.core.mngv|Snoopza|stalkerware
+com.android.core.mngw|Snoopza|stalkerware
+com.android.core.mngx|Snoopza|stalkerware
+com.android.core.mngy|Snoopza|stalkerware
+com.android.core.mngz|Snoopza|stalkerware
+com.android.core.mntah|Hoverwatch|stalkerware
+com.android.core.mnta|Hoverwatch|stalkerware
+com.android.core.mntb|Hoverwatch|stalkerware
+com.android.core.mntd|Hoverwatch|stalkerware
+com.android.core.mnte|Hoverwatch|stalkerware
+com.android.core.mntf|Hoverwatch|stalkerware
+com.android.core.mntg|Hoverwatch|stalkerware
+com.android.core.mnth|Hoverwatch|stalkerware
+com.android.core.mnti|Hoverwatch|stalkerware
+com.android.core.mntj|Hoverwatch|stalkerware
+com.android.core.mntk|Hoverwatch|stalkerware
+com.android.core.mntl|Hoverwatch|stalkerware
+com.android.core.mntm|Hoverwatch|stalkerware
+com.android.core.mntn|Hoverwatch|stalkerware
+com.android.core.mnto|Hoverwatch|stalkerware
+com.android.core.mntp|Hoverwatch|stalkerware
+com.android.core.mntq|Hoverwatch|stalkerware
+com.android.core.mntr|Hoverwatch|stalkerware
+com.android.core.mnts|Hoverwatch|stalkerware
+com.android.core.mntt|Hoverwatch|stalkerware
+com.android.core.mntu|Hoverwatch|stalkerware
+com.android.core.mntv|Hoverwatch|stalkerware
+com.android.core.mntw|Hoverwatch|stalkerware
+com.android.core.mntx|Hoverwatch|stalkerware
+com.android.core.mnty|Hoverwatch|stalkerware
+com.android.core.mntz|Hoverwatch|stalkerware
+com.android.core.mnt|Hoverwatch|stalkerware
+com.android.core.monitor.debug|Hoverwatch|stalkerware
+com.android.core.monitor.debug|Sync Service|stalkerware
+com.android.core.monitor.null|Hoverwatch|stalkerware
+com.android.core.monitornull|Hoverwatch|stalkerware
+com.android.core.monitor|Hoverwatch|stalkerware
+com.android.fystem.maps|AndroidPolice|stalkerware
+com.android.fystem.maps|Kurulum|stalkerware
+com.android.innovaspy|1TopSpy|stalkerware
+com.android.innovaspy|HelloSpy|stalkerware
+com.android.inputmethod.latinmy|AndroidPolice|stalkerware
+com.android.inputmethod.latinmy|KidLogger|stalkerware
+com.android.internet.a20200817|iKeyMonitor|stalkerware
+com.android.internet.a20210916|iKeyMonitor|stalkerware
+com.android.internet.a20220729|iKeyMonitor|stalkerware
+com.android.internet.a20220829|iKeyMonitor|stalkerware
+com.android.internet.a20220914|iKeyMonitor|stalkerware
+com.android.keyboardhelper|celSpy|stalkerware
+com.android.keyboardhelper|mSpy|stalkerware
+com.android.omg|TheOneSpy|stalkerware
+com.android.phone.dialer|FlexiSpy|stalkerware
+com.android.preference.help.mole|BosSpy|stalkerware
+com.android.preference.help.mole|Unknown|stalkerware
+com.android.preference.voice|UPreferences|stalkerware
+com.android.services|TheOneSpy|stalkerware
+com.android.settings.app|OneMonitar|stalkerware
+com.android.settings.app|OneSpy|stalkerware
+com.android.system.app|OneMonitar|stalkerware
+com.android.system.app|OneSpy|stalkerware
+com.android.system.devicelogs|AppMia|stalkerware
+com.android.system.devicelogs|com.android.devicelogs|stalkerware
+com.android.system.maps|AndroidPolice|stalkerware
+com.android.system.maps|Kurulum|stalkerware
+com.android.system|System Service|stalkerware
+com.android.wifi.tracker|Trackji|stalkerware
+com.android.wifi.tracker|Unknown|stalkerware
+com.androiddharmesh.editor|Cool Photo Editor|spyware
+com.androiddharmesh.fashioncam|Cool Filter Editor|spyware
+com.androidlost.smshandler|AndroidLost|stalkerware
+com.androidlost|AndroidLost|stalkerware
+com.anhhuy.adspagesmanager|Ads Pages Manager|spyware
+com.anhhuy.ads|Ads & Page|spyware
+com.ant.spymie.keylogger|Spymie|stalkerware
+com.aphonetracker.app|AppSpy|stalkerware
+com.app.audiorec|TrackMyPhones|stalkerware
+com.app.call_rec_hidden|TrackMyPhones|stalkerware
+com.app.com.app.com.app.aplintal|MeuSpy|stalkerware
+com.app.good.constellationmaster|Constellation Master|spyware
+com.app.insapp2|MeuSpy|stalkerware
+com.app.keylogger|TrackMyPhones|stalkerware
+com.app.recorder|TrackMyPhones|stalkerware
+com.app.remote_control|TrackingSmartphone|stalkerware
+com.app.remote_control|XZBO|stalkerware
+com.app.spy_call_recorder|TrackMyPhones|stalkerware
+com.app.videorec|TrackMyPhones|stalkerware
+com.applock.easyuse.lock|AppLock-Lock Apps & Privacy Guard|spyware
+com.apps.anti_theft|TrackMyPhones|stalkerware
+com.apps.rct.CellTrackerActivity|TrackMyPhones|stalkerware
+com.apspy.app|Copy9|stalkerware
+com.apspy.app|TheTruthSpy|stalkerware
+com.art.draw.SmoothPictureEditor|Smooth Picture Editor|spyware
+com.artext.picshow|Text Camera|spyware
+com.artoon.toonphoto|Artoon Photo Cartoon Creator|spyware
+com.artpics.campro|Pics Art|spyware
+com.as.clipboardmanager|AndroSpy|stalkerware
+com.as.clipboardmanager|RealtimeSpy|stalkerware
+com.as.facecapture|AndroSpy|stalkerware
+com.as.facecapture|RealtimeSpy|stalkerware
+com.as.gpstracker|AndroSpy|stalkerware
+com.as.gpstracker|RealtimeSpy|stalkerware
+com.as.keylogger2|AndroSpy|stalkerware
+com.as.keylogger2|RealtimeSpy|stalkerware
+com.as.keylogger|RealtimeSpy|stalkerware
+com.as.klogger|AndroSpy|stalkerware
+com.as.klogger|RealtimeSpy|stalkerware
+com.as.screenrecorder|AndroSpy|stalkerware
+com.as.screenrecorder|RealtimeSpy|stalkerware
+com.as.urllogger|AndroSpy|stalkerware
+com.as.urllogger|RealtimeSpy|stalkerware
+com.ashtoon.tooncool.skordoi|Ashtoon Cartoon Editor|spyware
+com.ass.antitheft|AbsoluTrack|stalkerware
+com.ass.antitheft|RemoteSecurity|stalkerware
+com.ass.ladieschildprotection|AbsoluTrack|stalkerware
+com.ass.ladieschildprotection|RemoteSecurity|stalkerware
+com.ass.remotesecurity|AbsoluTrack|stalkerware
+com.ass.remotesecurity|RemoteSecurity|stalkerware
+com.at.wwka|AndroidPolice|stalkerware
+com.atharva.perfect.photoeffects|Perfect Photo Effects | Loop Photo Animator|spyware
+com.ati.client|AndroidPolice|stalkerware
+com.ati.client|Atic|stalkerware
+com.ati.monitor|AndroidPolice|stalkerware
+com.ati.monitor|Atic|stalkerware
+com.ati.webwatcherconsole|AndroidPolice|stalkerware
+com.ati.webwatcherconsole|Atic|stalkerware
+com.atinc.slcompanion|AndroidPolice|stalkerware
+com.atinc.slcompanion|Atic|stalkerware
+com.atiw.wc|AndroidPolice|stalkerware
+com.atiw.wc|Atic|stalkerware
+com.atracker.app|AppSpy|stalkerware
+com.autoforward.monitor|AutoForward|stalkerware
+com.autoforward.monitor|HighsterMobile|stalkerware
+com.avi.scbase|pcTattletale|stalkerware
+com.awarenesstech.monitor|AndroidPolice|stalkerware
+com.awarenesstech.monitor|Atic|stalkerware
+com.awarenesstech.wwpapp|AndroidPolice|stalkerware
+com.awarenesstechnologies.sideloadedws|AndroidPolice|stalkerware
+com.awarenesstechnologies.sideloadedws|Atic|stalkerware
+com.awti.slc|AndroidPolice|stalkerware
+com.awti.slc|Atic|stalkerware
+com.backup.tt|RealtimeSpy|stalkerware
+com.backup.tt|ttspy|stalkerware
+com.ballmaster.puzzle|Bomb Master 3D|spyware
+com.beamuisclab.musicdownloader.song.mp3download.app|Free Music Downloader & Free Mp3 Downloader|spyware
+com.beauty.selfcamera.perfect|Beauty Camera|spyware
+com.beautycamera.plusfuny|Beauty Camera Plus|spyware
+com.beautyeditor.bestphotoeditor|Photo Editor|spyware
+com.beautymakeup.cameram|Beauty Makeup Camera|spyware
+com.bestpuz.gams.artpics|Art Puzzle 2021|spyware
+com.bettertomorrowapps.spyyourlovefree|CouplerTracker|stalkerware
+com.biscoco.camfilter|Biscuit Coco Cam|spyware
+com.bluee.gorme|Blue-shoot Game|spyware
+com.blur.image.handle|Blur Photo|spyware
+com.blut.shooting|Bluetouch Shooting Game|spyware
+com.bnahrrbc.kwexsnhl|AndroidPolice|stalkerware
+com.bnahrrbc.kwexsnhl|KidLogger|stalkerware
+com.bobom.crashran.race|Ranger Crash Game|spyware
+com.boo.bam.frvpn|Bamboo VPN|spyware
+com.borderedit.cameraapp|Border Sticker Camera|spyware
+com.brawsantoon.besteditor|Skintoon - Labs of Cartoon|spyware
+com.brot.storage.work|Reptilicus|stalkerware
+com.bul.b|AndroidPolice|stalkerware
+com.bul.b|ControlPhone|stalkerware
+com.bulgakov.bug|AndroidPolice|stalkerware
+com.bulgakov.bug|ControlPhone|stalkerware
+com.bulgakov.controlphone|AndroidPolice|stalkerware
+com.businessplannerdesign|Business Planner Manage|spyware
+com.bytepioneers.coupletracker|CouplerTracker|stalkerware
+com.bzbqbkya.hgozttiu|AndroidPolice|stalkerware
+com.bzbqbkya.hgozttiu|KidLogger|stalkerware
+com.callhist.calltr|AndroidPolice|stalkerware
+com.cam.io.cls|Classic filter camera|spyware
+com.camepicin.libevent|PIP Camera 2022|spyware
+com.camhart.netcountable|Unknown|stalkerware
+com.candlesvpn.proxyss|Candles VPN|spyware
+com.caniqiwa.perfectpuzzles|Perfect Puzzles|spyware
+com.cartoons.photofacemaker|Photo editor PIP collage maker|spyware
+com.caryshughes.toonprismaeffect|ToonPrisma - 3D Photo Effect|spyware
+com.catrsy.jaluc|AndroidPolice|stalkerware
+com.catrsy.jaluc|Gpspy|stalkerware
+com.cellph.montrb|AndroidPolice|stalkerware
+com.chaoqi.spyapp|AndroidPolice|stalkerware
+com.chaoqi.spyapp|Unknown|stalkerware
+com.charlottefabron.hdvideoplayer|HD Video Player with music|spyware
+com.classic.beat.cam|BeautyCam|spyware
+com.cldprotect|SpyHuman|stalkerware
+com.client.requestlogs|ShadowSpy|stalkerware
+com.cliffbradley.youtooncartooneffect|YouToon - AI Cartoon Effect|spyware
+com.cocospy|Cocospy|stalkerware
+com.colinread.playphooteditor|Play Phoot Editor & Collage|spyware
+com.collageimage.photofilter|Photo Filter|spyware
+com.connection.manager|Mrecorder|stalkerware
+com.connection.manager|mobrec|stalkerware
+com.contentwatch.ghoti.cp2.child|Unknown|stalkerware
+com.coolcall.callshow|Color Call|spyware
+com.coolcall.newspipcamera|Photo PIP Camera|spyware
+com.craftstoon.cartoonphoto|Craftsart Cartoon Photo Tools|spyware
+com.creatoonbest.faceedit|Creatoon Face Editor|spyware
+com.creatorlena.vieds|Photo Video Editor:Lena Editor|spyware
+com.crown.camera|Crown Camera|spyware
+com.cryzp.leplluln|AndroidPolice|stalkerware
+com.cryzp.leplluln|CellSpy|stalkerware
+com.customcamare.ppcamera|Photo Pro 2021|spyware
+com.cycle.start.mess|Reptilicus|stalkerware
+com.d2p.ads_manager_plus|Ads Manager Plus|spyware
+com.dahuadata.photomakerpip|Maker PIP Gallery|spyware
+com.dashboardmanagemeta|Pages Dashboard|spyware
+com.davykinsman.photoquipo.cartooneffect|Photoquipo Cartoon Pic Effect|spyware
+com.day.flywallpaper|Flyingfish Wallpaper|spyware
+com.dbzbpr.skt|AndroidPolice|stalkerware
+com.dbzbpr.skt|Gpspy|stalkerware
+com.ddhd.cameraadorn|CameraAdorn|spyware
+com.ddhd.creatormould|CreatorMould|spyware
+com.ddhd.photo.elegantimage|ElegantImage|spyware
+com.ddiutilities.monitor|AutoForward|stalkerware
+com.ddiutilities.monitor|HighsterMobile|stalkerware
+com.deepwallpaper.hd.live|Deep Wallpaper-live,HD|spyware
+com.dennisarmstrong.videolancervideomaker|Videolancer - Pro Video Maker|spyware
+com.dev4playapps.whatsdeleted|TrackMyPhones|stalkerware
+com.devspark.securityotp|SpySMS|stalkerware
+com.devspark.securityotp|Unknown|stalkerware
+com.dreammaker.phgridpip|PIP Collage Coco|spyware
+com.dressing.charm.apps|Dress up Charming|spyware
+com.droidwatcher|DroidWatcher|stalkerware
+com.droidwatcher|Unknown|stalkerware
+com.dromon|AndroidPolice|stalkerware
+com.dromon|MonitorChecker|stalkerware
+com.duiyun.cocospy.v2|Cocospy|stalkerware
+com.duiyun.cocospy|Cocospy|stalkerware
+com.duiyun.fonemonitor|Cocospy|stalkerware
+com.duiyun.spyic|Cocospy|stalkerware
+com.duiyun.spyine|Cocospy|stalkerware
+com.duiyun.spyzie|Cocospy|stalkerware
+com.dwyzb23xjiqpsn.zbqyuvfgtion|3 Patti King - India Rummy|spyware
+com.dy.spyzie.v4|Cocospy|stalkerware
+com.dypica.facepicture|Face Picture|spyware
+com.dysfree.barcode.scanner|QR Barcode Scan|spyware
+com.edgarmay.atecphotoeffect|Atec Sparkle Photo Editor 2022|spyware
+com.editor.xinphoto|Enjoy Photo Editor|spyware
+com.edmondatrentini.dingdingphotoeffect|Ding Ding Photo Effect Editor|spyware
+com.elpatr.woac|AndroidPolice|stalkerware
+com.elpatr.woac|Gpspy|stalkerware
+com.epasufob.kybavfgt|Spyone|stalkerware
+com.epbzrqcg.syzzkuqx|Spyone|stalkerware
+com.epbzrqcg.syzzkuqx|Unknown|stalkerware
+com.ernell.thht|AndroidPolice|stalkerware
+com.ernell.thht|Gpspy|stalkerware
+com.example.ghazi.sms|SpyAppGhazi|stalkerware
+com.example.ghazi.sms|Unknown|stalkerware
+com.example.hellospy|1TopSpy|stalkerware
+com.example.hellospy|HelloSpy|stalkerware
+com.example.lovespy.app|LoveSpy|stalkerware
+com.example.lovespy.app|Unknown|stalkerware
+com.example.openanotherapp|Spy24|stalkerware
+com.example.reverseshell2|AndroRat|stalkerware
+com.example.wosc.androidclient|CatWatchful|stalkerware
+com.expto.akgarhwal.puzzlex|Art Photo Puzzle|spyware
+com.eyezy.android|celSpy|stalkerware
+com.eyezy.android|mSpy|stalkerware
+com.eytewqrm.wvdkgmrl|Spyone|stalkerware
+com.eytewqrm.wvdkgmrl|Unknown|stalkerware
+com.fabiomancini.cartoonpainteffect|Cartoon Face Photo Editor|spyware
+com.faceart.savetoon.cartoonedit|Savetoon Art - Face Cartoon|spyware
+com.faceartoon.studioon|Facetoon Photo Art|spyware
+com.fast.vpn.lifestyleb|Fast VPN Proxy|spyware
+com.fb.ads.optimize|Ads Optimize|spyware
+com.fb.metas.adsmanager|Ads Manager For Business|spyware
+com.fbhpdsej.gnuebduy|AndroidPolice|stalkerware
+com.fbhpdsej.gnuebduy|KidLogger|stalkerware
+com.femimesusu.libapasopi|SpyApp|stalkerware
+com.femimesusu.libapasopi|Unknown|stalkerware
+com.fenced.ai|Fenced|stalkerware
+com.fenced.ai|MobileSpyIo|stalkerware
+com.fhekpqbq.otlzonjx|AndroidPolice|stalkerware
+com.fhekpqbq.otlzonjx|TiSpy|stalkerware
+com.fillartoon.toonphotos|Pica Artoon Face Editor|spyware
+com.filmstrip.drawanima|Photo Layout Editor|spyware
+com.filter.photoeditor|Instapic: Photo Editor Pro, Collage Maker|spyware
+com.fimeruv.shapephotoeditor|Shape Photo Editor|spyware
+com.fiwyl.sharephotomaker|Share Photo Maker|spyware
+com.flnt.uck|Speedy Vpn Tunnel|spyware
+com.floydhampton.moldishmansphotoeffect|Moldish - Men's Photo Editor|spyware
+com.flyspeed.fish|FlyFish Speed|spyware
+com.fone|Copy9|stalkerware
+com.fone|TheTruthSpy|stalkerware
+com.fonts.text.board|Stylist Fonts for Keyboard|spyware
+com.fotspicass.makerpiccoa|PIP Editor Frame Photo|spyware
+com.fp.backup|FlexiSpy|stalkerware
+com.fqrs.qrscapp|Flash QRCode Scanner|spyware
+com.free.unlimited.transcendvpn|Transcend VPN|spyware
+com.free.vpn.masterproxy|Free VPN Master|spyware
+com.freevpn.proxytubervpn|Tuber VPN - Free&Secure VPN Proxy Server|spyware
+com.freevpn.proxytuber|Super Tuber VPN|spyware
+com.fstl.vtnel|Fast Vpn Tunnel|spyware
+com.fucol.puz|Photo Puzzle 2021|spyware
+com.fun.herone.racegame|Lone Hero Racing|spyware
+com.fysolasil.sharephotoeditor|Share Photo Editor|spyware
+com.fzvsdrtb.qamlhxri|BrunoEspiao|stalkerware
+com.fzvsdrtb.qamlhxri|Unknown|stalkerware
+com.gadybatax.artsphotos|Arts Photos|spyware
+com.gallery.provides|Art Filters:Photo to Painting|spyware
+com.gamebooster.safegame|Game Booster|spyware
+com.gcam.pvint|Vinto Cam|spyware
+com.gcm_call_sms_tracker.updated|CallSMSTracker|stalkerware
+com.gcm_call_sms_tracker.updated|TrackMyPhones|stalkerware
+com.gcm_call_sms_tracker|TrackMyPhones|stalkerware
+com.gcm_call_tracker|TrackMyPhones|stalkerware
+com.gcm_celltracker|TrackMyPhones|stalkerware
+com.genten.soulmatch|Emotion Checker|spyware
+com.get.mtf|MobileTrackerFree|stalkerware
+com.gh.ob|AndroidPolice|stalkerware
+com.ghost.vpn.masterproxy|Ghost VPN Proxy|spyware
+com.github.muneebwanee.dash|Dash|stalkerware
+com.github.muneebwanee.dash|Unknown|stalkerware
+com.gizmoquip.smstracker|CallSMSTracker|stalkerware
+com.google.android.bacfup|AndroidPolice|stalkerware
+com.google.android.bacfup|Kurulum|stalkerware
+com.google.android.network|Buhsam|stalkerware
+com.google.android.safe|AndroidPolice|stalkerware
+com.google.android.safe|Kurulum|stalkerware
+com.googleplay.settings|NetSpy|stalkerware
+com.googlesettings.setting|1TopSpy|stalkerware
+com.googlesettings.setting|HelloSpy|stalkerware
+com.gpssettings.src.v65|Mobile Spy|stalkerware
+com.gpstrian.phototrian|Train Photo|spyware
+com.greatdata|AndroidPolice|stalkerware
+com.greatdata|Gpspy|stalkerware
+com.grigoriipeerevozchiikov.animephoto|Anime Photo|spyware
+com.gss.whereismyphone|AbsoluTrack|stalkerware
+com.gss.whereismyphone|RemoteSecurity|stalkerware
+com.gtrid.edit.bingoemaker|Photo Editor Pic Collage|spyware
+com.guest|System Service|stalkerware
+com.guest|TheTruthSpy|stalkerware
+com.gzomoyig.qwgawtaz|AndroidPolice|stalkerware
+com.gzomoyig.qwgawtaz|KidLogger|stalkerware
+com.hellospy.system|HelloSpy|stalkerware
+com.hellospy.system|System Services|stalkerware
+com.hellospy|1TopSpy|stalkerware
+com.hellospy|HelloSpy|stalkerware
+com.hiepro.hiynode|Hiyoo Hidenode pro|spyware
+com.hiranursaygi.allinoneofficereader|All in one Doc Editor & Viewer|spyware
+com.hn.dayblue|Fun Wallpaper|spyware
+com.hotspot.vpn.freeproxy|Hotspot Free VPN|spyware
+com.hp.vc|FreeAndroidSpy|stalkerware
+com.hp.vd|FreeAndroidSpy|stalkerware
+com.hqapps.ppp.wallpaper|Highquality Purple Wallpaper|spyware
+com.hunbeiren.pipeditorimage|PIP Editor Image|spyware
+com.hyadesinc.curiosus|Curiosus|stalkerware
+com.hyadesinc.curiosus|Unknown|stalkerware
+com.ibm.fb|AndroidMonitor|stalkerware
+com.iceselfie.beautycamx|Ice Selfie Beauty Cam|spyware
+com.iclaude.scheduledrecorder|Scheduled Recorder (spy recorder)|stalkerware
+com.igyluazm.iytdhsky|AndroidPolice|stalkerware
+com.igyluazm.iytdhsky|Unknown|stalkerware
+com.image.move.puzzle|Image Move Puzzle|spyware
+com.imonitor.ainfo|iMonitorSpy|stalkerware
+com.instagram.app|Business from Instagram|spyware
+com.interaction.wonderful|Wonderful Camera|spyware
+com.ispyoo.traceyou|Copy9|stalkerware
+com.ispyoo.traceyou|TheTruthSpy|stalkerware
+com.ispyoo|System Service|stalkerware
+com.ispyoo|TheTruthSpy|stalkerware
+com.itqredn8dzrl|SpyLive360|stalkerware
+com.ivorfrazier.orahororscope|Ora Horoscope - Fortune Finder|spyware
+com.jgeuhcex.ejcxndak|Spyone|stalkerware
+com.jgeuhcex.ejcxndak|Unknown|stalkerware
+com.juzyuwqt.thxxnjvf|Spyone|stalkerware
+com.jxpsnyy.kbvjdjx.dingdingphotoeffect|Ding Ding Photo Editor|spyware
+com.jyotin.ct|MobileTrackerFree|stalkerware
+com.kali.free.online.fast.translation|Instant Translator|spyware
+com.kali_corporation.skethcamplus|Sketch CamPlus|spyware
+com.kangaroo.vpnproxy|Kangaroo VPN|spyware
+com.katarinalang.photocollage.room|Photoont - Photo Collage Edit|spyware
+com.kfhdha.fkjfgjdi|EspiaoAndroid|stalkerware
+com.kids.pro|ClevGuard|stalkerware
+com.kids.whatsapp|ClevGuard|stalkerware
+com.kidsmobmon|AndroidPolice|stalkerware
+com.kotmob.palmistry|Palmistry Reading Free|spyware
+com.kutsalkoyuncu.toonexphotoediotr|Toonex Photo Editor 2022|spyware
+com.laucass.androsmscontrol|Spyone|stalkerware
+com.laucass.phonecontrolenabler|Spyone|stalkerware
+com.laucass.phonecontrolenabler|Unknown|stalkerware
+com.laucass.phonecontroltarget|Spyone|stalkerware
+com.laucass.phonecontroltarget|Unknown|stalkerware
+com.leg.musclemaker.strong.man.getfit|Male fitness|spyware
+com.leneroth.photocollagegridmaker|Pic Collage & Cartoon Editor|spyware
+com.liannasoft.editorcam|4K Camera Hyper Photo Filters|spyware
+com.liferun.freegame|Life Run|spyware
+com.lightling.creatortoon.cartoon|Lighting Creator Toon|spyware
+com.lightning.vpn.proxys|Lightning VPN|spyware
+com.likefile.superfile|Files Clear|spyware
+com.lilaihua.photoeditor|PhotoEditor|spyware
+com.local_cell_tracker_updated|TrackMyPhones|stalkerware
+com.local_cell_tracker|TrackMyPhones|stalkerware
+com.lofacartoon.azwajstudio|Lofa - Studio Photo Cartoon|spyware
+com.lrvciyti.unrxnfig|MobileTrackerFree|stalkerware
+com.lsdroid.cerberus.client|Cerberus|stalkerware
+com.lsdroid.cerberus.kids|Cerberus|stalkerware
+com.lsdroid.cerberus.persona2|Cerberus|stalkerware
+com.lsdroid.cerberus.persona|Cerberus|stalkerware
+com.lsdroid.cerberuss|Cerberus|stalkerware
+com.lsdroid.cerberus|Cerberus anti theft|stalkerware
+com.lsdroid.cerberus|Cerberus|stalkerware
+com.luckycatcher.freegame|Lucky Catcher - Catch Them All|spyware
+com.lucpro.luckypro|Lucky Number Pro|spyware
+com.lujeqari.videoremaker|Video Remaker|spyware
+com.m.service.control|MobileTrackerFree|stalkerware
+com.madtoon.aicartoon.kiroah|MadToon Face Cartoon|spyware
+com.magic.world.daily.mhoroscope|Magic Horoscope|spyware
+com.mango.findmyphone2|AndroidPolice|stalkerware
+com.mango.findmyphone2|InMobi|stalkerware
+com.mango.findmyphone3|AndroidPolice|stalkerware
+com.mango.findmyphone|AndroidPolice|stalkerware
+com.map.system|XNSpy|stalkerware
+com.marcyl.wagbversion.gblatest.gbproversion.lite|GB WA Warna Latest Version|spyware
+com.masto.kicter|Free Comic Photos|spyware
+com.maxinetate.jessicabailey.fosterphotoeffect|Foster - Cartoon Photo Effect|spyware
+com.maxxspy.system|1TopSpy|stalkerware
+com.maxxspy.system|HelloSpy|stalkerware
+com.maxxspy|1TopSpy|stalkerware
+com.maxxspy|HelloSpy|stalkerware
+com.merkee.neosnap.photo.editor.pro|NeoSnap Photo Editor|spyware
+com.meta.adsformeta2|Business Ads for Meta|spyware
+com.meta.adsformeta3|Business Meta Manager|spyware
+com.meta.optimizer|Meta Optimizer - Ads Analysis|spyware
+com.metasploit.stage|Metasploit|stalkerware
+com.meteor.fast.connection|Meteor vpn|spyware
+com.meuspy|MeuSpy|stalkerware
+com.mexsier.nebwallpaper|Nebula Wallpaper|spyware
+com.microsoft.familysafety|Unknown|stalkerware
+com.milohoward.rosalindvega.theobarber.photoframeeffecteditor|Photo Editor - Frame Effect|spyware
+com.minspy.v2|Cocospy|stalkerware
+com.minspy.v3|Cocospy|stalkerware
+com.mit.networkadapter|VIPTrack|stalkerware
+com.mit.viptrackpro|VIPTrack|stalkerware
+com.mkce.fsvc|Full Screen Video Editor|spyware
+com.mnbeautif.lanchmn|Nice Photo|spyware
+com.mnwkvijy.wzyxgrft|AndroidPolice|stalkerware
+com.mnwkvijy.wzyxgrft|KidLogger|stalkerware
+com.mob.service.control|MobileTrackerFree|stalkerware
+com.mobiispy.system|1TopSpy|stalkerware
+com.mobiispy.system|HelloSpy|stalkerware
+com.mobiispy|1TopSpy|stalkerware
+com.mobiispy|HelloSpy|stalkerware
+com.mobile.asgard|GPSTrackerLoki|stalkerware
+com.mobile.gps|MobileTrackerFree|stalkerware
+com.mobile.loc|MobileTrackerFree|stalkerware
+com.mobile.loki|GPSTrackerLoki|stalkerware
+com.mobilefindfree|AppSpy|stalkerware
+com.mobileservice.sync|Mrecorder|stalkerware
+com.mobileservice.sync|mobrec|stalkerware
+com.mobileservices2.synchronization|Mrecorder|stalkerware
+com.mobileservices2.synchronization|mobrec|stalkerware
+com.mobilespy.io|Fenced|stalkerware
+com.mobilespy.io|MobileSpyIo|stalkerware
+com.mobiletrackerfree.secondapp|MobileTrackerFree|stalkerware
+com.mobiletrackerfree.www|MobileTrackerFree|stalkerware
+com.mobiletracker|MobileTrackerFree|stalkerware
+com.mobitra.todv|AndroidPolice|stalkerware
+com.mobitra.todv|Gpspy|stalkerware
+com.mobphn.monit|AndroidPolice|stalkerware
+com.mobtr.danbel|AndroidPolice|stalkerware
+com.mobtr.danbel|Gpspy|stalkerware
+com.moker.sticker|Sticker Maker Pro|spyware
+com.mold.figure.gym|Mold Figure Gym|spyware
+com.monitor.phone.s0ft.phonemonitor|PhoneMonitor|stalkerware
+com.monitor.phone.s0ft.phonemonitor|Unknown|stalkerware
+com.monitorchecker|AndroidPolice|stalkerware
+com.monitorchecker|MonitorChecker|stalkerware
+com.monspap.alarm|EasyPhoneTrack|stalkerware
+com.mood.camerapluss|Mood Camera|spyware
+com.mophtr.td|AndroidPolice|stalkerware
+com.mophtr.td|Gpspy|stalkerware
+com.mosiaguda.astrohoroscope|Astro Horoscope Guide 2022|spyware
+com.moxlndmp.uhzhgzjh|BrunoEspiao|stalkerware
+com.moxlndmp.uhzhgzjh|Unknown|stalkerware
+com.mrblue.setting|1TopSpy|stalkerware
+com.mrblue.setting|HelloSpy|stalkerware
+com.mrbluetooth.setting|1TopSpy|stalkerware
+com.mrbluetooth.setting|HelloSpy|stalkerware
+com.mrecorder.callrecorder|Mrecorder|stalkerware
+com.mrecorder.callrecorder|mobrec|stalkerware
+com.mrtred.setred|1TopSpy|stalkerware
+com.mrtred.setred|HelloSpy|stalkerware
+com.mspy.lite|mSpy|stalkerware
+com.mtf.download|MobileTrackerFree / MonitorLoverman / MTrack / CellTracker / TrackMobil|stalkerware
+com.mtf.download|MobileTrackerFree|stalkerware
+com.mtf.d|MobileTrackerFree|stalkerware
+com.mumu.music.mmp|MuMus Music Player|spyware
+com.mxspy|System Service|stalkerware
+com.mxspy|TheTruthSpy|stalkerware
+com.my.spy.app|MySpyApps|stalkerware
+com.my.spy.app|Unknown|stalkerware
+com.myappspqwddeexo|SpyHuman|stalkerware
+com.netowrk.service|MobileTrackerFree|stalkerware
+com.newsandpic.cityphoto|Photo PIP 2022|spyware
+com.nhevvtmt.thinkquo|BrunoEspiao|stalkerware
+com.niceimg.editorsa|Camera PIP|spyware
+com.nsmon.guard|NeoSpy|stalkerware
+com.ntckdlhc.oifhnjwp|AndroidPolice|stalkerware
+com.ntckdlhc.oifhnjwp|KidLogger|stalkerware
+com.nuclearpower.vpnp|Nuclear VPN Proxy|spyware
+com.okenyo.creatkartoon.studio|Okenyo Studio Creatoon|spyware
+com.oknia.panacamera|Pana Camera|spyware
+com.olfitness.android|Daily Fitness OL|spyware
+com.onlansuyanto.editor.bading|Onlan Cartoon Editor|spyware
+com.oransoda.player.soda|Soda Music Player|spyware
+com.ots.antitheft|AbsoluTrack|stalkerware
+com.ots.antitheft|RemoteSecurity|stalkerware
+com.ots.ladieschildprotection|AbsoluTrack|stalkerware
+com.ots.ladieschildprotection|RemoteSecurity|stalkerware
+com.ots.remotesecurity|AbsoluTrack|stalkerware
+com.ots.remotesecurity|RemoteSecurity|stalkerware
+com.ots.womenchildsafety|AbsoluTrack|stalkerware
+com.ots.womenchildsafety|RemoteSecurity|stalkerware
+com.ownspy.android|OwnSpy|stalkerware
+com.palmistry.ofdestiny|Palmistry of Destiny|spyware
+com.panspy.android|PanSpy|stalkerware
+com.papalai.popularemoji|Popular Emoji|spyware
+com.pedomeste.steppedometer|Hot Sexy Girls|spyware
+com.perfectphoto.lookablum|Perfect Photo Album|spyware
+com.peweephotoon.halfcartoon|Pewee Photoon - Photo Cartoon|spyware
+com.phabanner.cameraig|Photo PIP|spyware
+com.phone.tracker.smsb|AndroidPolice|stalkerware
+com.phonepad.sniper|Critical Strike Ops - FPS 3D shooting Game|spyware
+com.phonepad.towerdefense|Tower Defense Zone - Batmen Rush|spyware
+com.phonespector.app|AutoForward|stalkerware
+com.phonespector.app|HighsterMobile|stalkerware
+com.phonetrackerofficial1|SpyphoneMobileTracker|stalkerware
+com.phonetrackerofficial|SpyphoneMobileTracker|stalkerware
+com.photo.adjuster|Simple Photo Adjuster|spyware
+com.photo.blureffect|Blur Effect Camera|spyware
+com.photo.move|Photo Gaming Puzzle|spyware
+com.photo.panoramacamera|Panorama Camera|spyware
+com.photoeditor.pipcamera.photoeffects|Pip Camera 2022|spyware
+com.photoeditor.proy|Photo editor Pro|spyware
+com.photoeditor.sweetsummer|Sweet Summer Camera App|spyware
+com.photoeditoreffect.mojung|Abrasive Photo Editor|spyware
+com.photolupo.pipwall|Photo Editors|spyware
+com.photoplaze.rainbow.color|Rainbow Photo Plaze|spyware
+com.photosticker.camerayou|Photo Sticker&Camera:make you beauty|spyware
+com.phtranlo.tifach|AndroidPolice|stalkerware
+com.phtranlo.tifach|Gpspy|stalkerware
+com.piccollage.imageeditors|Pic collage: photo editor&beauty image|spyware
+com.piclibra.apiceditor|Camera PIP Editor|spyware
+com.pip.photo.editor.camera.pipimage.maker|PIP Pic Camera Photo Editor|spyware
+com.piphoto.pipsapp|PIP Photo|spyware
+com.pipnames.gocamera|PIP Editor Collage|spyware
+com.play.services|uMobix|stalkerware
+com.playapp.arteffect.app|ToonArt|spyware
+com.playrix.manormatter|Treasures of the Pharaoh|spyware
+com.plugiedit.editandimg|PIP Pic Camera Photo Editor|spyware
+com.popo.analyse|PhoneSpy|stalkerware
+com.popo.analyse|Unknown|stalkerware
+com.postergrid.resdecypic|Photo Collage Maker Pic|spyware
+com.pped.topcam|Perfect Photo Editor|spyware
+com.prettysmart.easyuse.powerlock|Smart AppLock|spyware
+com.privacyapp.applocker.coolock|Cool Lock|spyware
+com.probit.flare|Unknown|stalkerware
+com.prophoto.editor|1TopSpy|stalkerware
+com.prophoto.editor|HelloSpy|stalkerware
+com.protect.download|MobileTrackerFree|stalkerware
+com.protect|AndroidPolice|stalkerware
+com.protect|KidLogger|stalkerware
+com.psac.a.processservice|MobiSpy|stalkerware
+com.pser.sysutils|AndroidPolice|stalkerware
+com.pser.sysutils|CellSpy|stalkerware
+com.pt.bark|bark|stalkerware
+com.pulse.leftstrong.app|Pulse Music Player|spyware
+com.pumpkinvpn.proxysafen|Pumpkin VPN|spyware
+com.punk.data.transmission|Punk Vpn|spyware
+com.purevpn.secure.intenetproxy|Pure-VPN:Fast Stable Secure internet Proxy|spyware
+com.pvojpamt.tzzyqjyb|PhoneMonitor|stalkerware
+com.quality.famous.deep|Deep Art Effects|spyware
+com.qwertyuiop.asdfghjkl|OneSpy|stalkerware
+com.qzogle.android.jacfut|AndroidPolice|stalkerware
+com.qzogle.android.jacfut|Kurulum|stalkerware
+com.qzogle.xndroid.jacfup|AndroidPolice|stalkerware
+com.qzogle.xndroid.jacfup|Kurulum|stalkerware
+com.qzogle.xndroid.jacfut|AndroidPolice|stalkerware
+com.qzogle.xndroid.jacfut|Kurulum|stalkerware
+com.rana_aditya.child|Spyzier|stalkerware
+com.rana_aditya.child|Unknown|stalkerware
+com.realdrive.dreamgame|Real Driving|spyware
+com.realtime.spyapp|RealtimeSpy|stalkerware
+com.realtime.spyapp|Unknown|stalkerware
+com.rebekkadreyer.facecartooneffect.photoeditor|Papatoon Face Art Editor|spyware
+com.remote.app|Unknown|stalkerware
+com.remote.app|XploitSPY|stalkerware
+com.renanespic.addpici|Camera Photo Editor|spyware
+com.rephko.stha|AndroidPolice|stalkerware
+com.rephko.stha|Gpspy|stalkerware
+com.retina.phonesheriff|PhoneSheriff|stalkerware
+com.retina21.ms41|PhoneSheriff|stalkerware
+com.retina22.ms6|PhoneSheriff|stalkerware
+com.retinasoft.ephonetracker|PhoneSheriff|stalkerware
+com.retmagic.piplike|PIP Magic 2022|spyware
+com.rextate.photovideomaker|Photo Video Creator with Music|spyware
+com.ring.alarm.tone.flash|Pop Ringtone|spyware
+com.rismas.tdaycam|Christmas Sticker Camera App|spyware
+com.rnapp.fmfm|Ads Manager for Meta|spyware
+com.roc.ketcon|Rocket Connect|spyware
+com.rspl15.nanny.android|PhoneSheriff|stalkerware
+com.rspl16.nanny.android|PhoneSheriff|stalkerware
+com.rspl17.nanny.android|PhoneSheriff|stalkerware
+com.rspl18.nanny.android|PhoneSheriff|stalkerware
+com.rspl19.nanny.android|PhoneSheriff|stalkerware
+com.rspl20.nanny.android|PhoneSheriff|stalkerware
+com.rspl21.nanny.android|PhoneSheriff|stalkerware
+com.rspl22.retinaspy|PhoneSheriff|stalkerware
+com.runaki.synclogs|ShadowSpy|stalkerware
+com.rushcar.hypergame|Rush Car 3D|spyware
+com.rushhour.hyperovertake|Rush Hour 3D - Heavy Traffic|spyware
+com.rynama.videoeditor|Video Editor|spyware
+com.s2m.seas|AndroidPolice|stalkerware
+com.s2m.seas|Gpspy|stalkerware
+com.s2m|AndroidPolice|stalkerware
+com.s2m|Gpspy|stalkerware
+com.sa.app|SpyAdvice|stalkerware
+com.safe.fast.connect|Safe Link|spyware
+com.safesecureservice|Secure Service|stalkerware
+com.safesecureservice|SpyHuman|stalkerware
+com.saloomughal.spyapp|BlurSpy|stalkerware
+com.sap4mobile|AndroidPolice|stalkerware
+com.sap4mobile|Gpspy|stalkerware
+com.saprontsevgertrud.cartoonillustrator|Cartoon Illustrator|spyware
+com.satan.gifpipo|PIPO GIF|spyware
+com.saxfamqvxj|SpyHuman|stalkerware
+com.sc.cocospy.v2|Cocospy|stalkerware
+com.sc.fonemonitor.v2|Cocospy|stalkerware
+com.sc.fonemonitor|Cocospy|stalkerware
+com.sc.minspy.v2|Cocospy|stalkerware
+com.sc.neatspy.v2|Cocospy|stalkerware
+com.sc.safespy.v2|Cocospy|stalkerware
+com.sc.safespy.v3|Cocospy|stalkerware
+com.sc.spyic.v2|Cocospy|stalkerware
+com.sc.spyic.v3|Cocospy|stalkerware
+com.sc.spyier.v2|Cocospy|stalkerware
+com.sc.spyier.v2|Spyier|stalkerware
+com.sc.spyine.v2|Cocospy|stalkerware
+com.sc.spyzie.v2|Cocospy|stalkerware
+com.sc.teensafe.v2|Cocospy|stalkerware
+com.screentime|AndroidPolice|stalkerware
+com.sec.android.internet.im.service.im20190118|iKeyMonitor|stalkerware
+com.sec.android.internet.im.service.im20190419|iKeyMonitor|stalkerware
+com.sec.android.internet.im.service.im20210815|iKeyMonitor|stalkerware
+com.sec.android.internet.service.ik|Internet Service|stalkerware
+com.sec.provider.mobile.android|MonitorUltra|stalkerware
+com.sec.provider.mobile.android|Unknown|stalkerware
+com.secsurf.fastvpn|Surf Vpn|spyware
+com.seelad.mucxx.apo|Sealand Music Player|spyware
+com.selgdg.febgdsra|AndroidPolice|stalkerware
+com.selgdg.febgdsra|KidLogger|stalkerware
+com.selgdg.mardsdaf|AndroidPolice|stalkerware
+com.selgdg.mardsdaf|KidLogger|stalkerware
+com.semantic.childcontrol|SpyMasterPro|stalkerware
+com.sensitivity.swarmphoto|Swarm Photo|spyware
+com.sepfsp.jasend|AndroidPolice|stalkerware
+com.sepfsp.jasend|KidLogger|stalkerware
+com.service.mug|SpyMug|stalkerware
+com.services.phone|MobileTrackerFree|stalkerware
+com.servotronicstech.perfectprocam|Perfect ProCam|spyware
+com.sev.android.systemdev|AndroidPolice|stalkerware
+com.sev.android.systemdev|CellSpy|stalkerware
+com.shadow.client.android|ShadowSpy|stalkerware
+com.shadyspy.monitor|ShadySpy|stalkerware
+com.shadyspy.monitor|Unknown|stalkerware
+com.sheilacoleman.fissioneffectdoeditor|Fission Effectdo Pic Editor|spyware
+com.shinestar.camerax|ShineStar Camera|spyware
+com.shirleypope.lightexposureedit|Light Exposure Photo Editor|spyware
+com.sketchmaster.camplus|Cartoon Cam Pro|spyware
+com.sl360|SpyLive360|stalkerware
+com.slftz.xlzg|High HD Wallpapers 4K|spyware
+com.slidingpuzzle.slidepuzzle|Amazing Photo Puzzle|spyware
+com.smart.guardoffline|AbsoluTrack|stalkerware
+com.smart.guardoffline|RemoteSecurity|stalkerware
+com.smartback|AndroidPolice|stalkerware
+com.smartback|Gpspy|stalkerware
+com.smart|AndroidPolice|stalkerware
+com.smart|Gpspy|stalkerware
+com.sms.mms.message.ffei.free|Smart SMS Messages|spyware
+com.smstra.xanris|AndroidPolice|stalkerware
+com.smstra.xanris|Gpspy|stalkerware
+com.snapcamera.beautyys|Snap Beauty Camera|spyware
+com.snapch.monabcab|EasyPhoneTrack|stalkerware
+com.snapchat.trmonap|EasyPhoneTrack|stalkerware
+com.snapeditor.proproxy|Snap Editor Pro|spyware
+com.snapface.sticker.camera|Snap Face Camera|spyware
+com.snapsandwich.camera|Sandwich SnapBeauty Cam|spyware
+com.sofapro.editortoon|Sofa Cartoon - Pro Editor|spyware
+com.softalogy.thiefguard|AbsoluTrack|stalkerware
+com.softalogy.thiefguard|RemoteSecurity|stalkerware
+com.soh|TrackMyPhones|stalkerware
+com.solupho.imdetail|PIP 2022|spyware
+com.spappm_mondow.alarm|Backup|stalkerware
+com.spappm_mondow.alarm|EasyPhoneTrack|stalkerware
+com.spappm_mondow.alarm|SpyPhoneApp|stalkerware
+com.spapptrakapp.alarm|SpyPhoneApp|stalkerware
+com.spatrakappp.alarm|SpyPhoneApp|stalkerware
+com.spedgame.dsrg|Drift Speed Racing Game|spyware
+com.speed.booster.phonefree|Speed Booster|spyware
+com.splicteout.photocolleger|SplitScreen PIP|spyware
+com.spy2mobile.light|AndroidPolice|stalkerware
+com.spy2mobile.light|Data Backup|stalkerware
+com.spy2mobile|AndroidPolice|stalkerware
+com.spy2mobile|Gpspy|stalkerware
+com.spyapp247.system|SpyApp247|stalkerware
+com.spyhumanrev|SpyHuman|stalkerware
+com.spyic|Cocospy|stalkerware
+com.spynote.software.stubspynote|Scream|stalkerware
+com.spynote.software.stubspynote|SpyNote|stalkerware
+com.spytoapp.system|SpyToApp|stalkerware
+com.spytoapp.system|SystemTask!|stalkerware
+com.spyzee|Copy9|stalkerware
+com.spyzee|TheTruthSpy|stalkerware
+com.sqlengphoto.photoeditorpicmix|PicMix Photo Editor|spyware
+com.ssurebrec|Cerberus anti theft|stalkerware
+com.ssurebrec|Cerberus|stalkerware
+com.star.line.link|Star Line|spyware
+com.stillcut.spiraeffect|PIP PHOTO|spyware
+com.stmrsa.htxt|AndroidPolice|stalkerware
+com.stmrsa.htxt|Gpspy|stalkerware
+com.su.per.video|Pvideo|spyware
+com.superior.speed.data|Superior Speed|spyware
+com.surebrec|Cerberus|stalkerware
+com.surfvpn.proxyfast|SurfVPN - Fast VPN Proxy|spyware
+com.svpnproxy.free|S-VPN Proxy|spyware
+com.svpnproxy.safeclient|S VPN - Fast & Safe VPN Client|spyware
+com.sweet.lightlycamera|Lightly Camera|spyware
+com.sweetcamera.filterface|Sweet Beauty Plus Camera|spyware
+com.sweetsnap.camera.sticker|Beauty Sweet Camera|spyware
+com.system.settings|Observer|stalkerware
+com.system.settings|Unknown|stalkerware
+com.system.task|XNSpy|stalkerware
+com.system.user|uMobix|stalkerware
+com.systemservice|Copy9|stalkerware
+com.systemservice|TheTruthSpy|stalkerware
+com.tag.viptrack|VIPTrack|stalkerware
+com.tbn.fasts|Speedy Turbo|spyware
+com.tbntxear.vfmkjxme|AndroidPolice|stalkerware
+com.tbntxear.vfmkjxme|KidLogger|stalkerware
+com.tccplos.spth|AndroidPolice|stalkerware
+com.tccplos.spth|Gpspy|stalkerware
+com.techno.photoposterframe|Fantastic camera|spyware
+com.telephony.android|FlexiSpy|stalkerware
+com.tentwheel.flyingphoto|Flying Photo|spyware
+com.tevi.walpi|AndroidPolice|stalkerware
+com.tevi.walpi|Gpspy|stalkerware
+com.thaxygpc.xjsjobpn|BrunoEspiao|stalkerware
+com.thecybernanny.andapp|Reptilicus|stalkerware
+com.theme.cartoon.board.key|Cartoon Keyboard Theme|spyware
+com.thetruth|Copy9|stalkerware
+com.thetruth|TheTruthSpy|stalkerware
+com.thewispy|TheWiSpy|stalkerware
+com.thewispy|Unknown|stalkerware
+com.threetranslator.wonderas|Translation Assistant|spyware
+com.timeon.litclient|Unknown|stalkerware
+com.tools.secretcamcorder|SecretCamRecorder|stalkerware
+com.topspy.system|HelloSpy|stalkerware
+com.topspy.system|System Services|stalkerware
+com.topspy|1TopSpy|stalkerware
+com.topspy|HelloSpy|stalkerware
+com.torrent.fast.exchange|Torrent|spyware
+com.touchvpn.free.proxy|Torch VPN Proxy|spyware
+com.touchvpn.proxymaster|Touch VPN Master|spyware
+com.tracker.sms.mobile|AndroidPolice|stalkerware
+com.trackerapps.whatsaptracker|TrackMyPhones|stalkerware
+com.tracking_smartphone|TrackingSmartphone|stalkerware
+com.tracking_smartphone|XZBO|stalkerware
+com.trackmyphone_pro|TrackMyPhones|stalkerware
+com.trackmyphones.livefamilytracker|TrackMyPhones|stalkerware
+com.trackmyphones.recoverphoneusingchatmessages|TrackMyPhones|stalkerware
+com.trackmyphones.tmpusingchatmessages|TrackMyPhones|stalkerware
+com.trackview|TrackView|stalkerware
+com.trackzone.kids|AndroidPolice|stalkerware
+com.traffictour.freegame|Traffic Tour 3D|spyware
+com.trandmon.tool|AndroidPolice|stalkerware
+com.trixgardner.photazophotoeffect|Photazo - PIP & Cartoon Effect|spyware
+com.trphwhat.prob|AndroidPolice|stalkerware
+com.truing.motopoolparty|MotoM3X-PoolParty|spyware
+com.ts_settings|TrackingSmartphone|stalkerware
+com.ts_settings|XZBO|stalkerware
+com.ttsapp.catchcheating|TheTruthSpy|stalkerware
+com.tuber.vpnproxy.internet|Tuber VPN Proxy|spyware
+com.tubevpn.master.free|Tubo VPN Master|spyware
+com.tuner.funnelwebview|uMobix|stalkerware
+com.turbo.data.transmission|Secure Turbo|spyware
+com.tutorial.instalao|MeuSpy|stalkerware
+com.ubo.tnspeed|Turbo Net|spyware
+com.udxlbuno.plwnnhop|AndroidPolice|stalkerware
+com.udxlbuno.plwnnhop|Unknown|stalkerware
+com.unlimited.net.request|Unlimited Net|spyware
+com.uxgbipup.pdtvcgzc|AndroidPolice|stalkerware
+com.uxgbipup.pdtvcgzc|KidLogger|stalkerware
+com.uzoifhzk.qmqnpwaf|AndroidPolice|stalkerware
+com.uzoifhzk.qmqnpwaf|KidLogger|stalkerware
+com.v2.fast.free.rocketvpn|VPN Lite - Fast & Easy use VPN|spyware
+com.vendertext.onphoto|Vender Add Text on Photo|spyware
+com.viewcalls.rem|AndroidPolice|stalkerware
+com.viewsms.remb|AndroidPolice|stalkerware
+com.virgovpn.proxyy|Virgo VPN|spyware
+com.virsys.tracker|1TopSpy|stalkerware
+com.virsys.tracker|HelloSpy|stalkerware
+com.vivavpnbooster.free|Viva VPN Booster|spyware
+com.vivid.coltor|Vivid Cooleditor|spyware
+com.voicechanger.soundseffect|Voice Changer|spyware
+com.vpn.proxy.unlimited|Private VPN HD|spyware
+com.vvt.android.syncmanager|FlexiSpy|stalkerware
+com.w0f0|SpyLive360|stalkerware
+com.w1f1|SpyLive360|stalkerware
+com.wSpyEra|SpyEra|stalkerware
+com.wallpaper4k.tools|4K Wallpaper|spyware
+com.wanstep.likekeepstep|Keep Step|spyware
+com.waxwell.saunders.pistaphotoeditor|Pista - Cartoon Photo Effect|spyware
+com.waynecraig.magicalastrology|Magical Daily Astrology Reader|spyware
+com.wb.production|Cocospy|stalkerware
+com.whddhd.brilliantphoto|Brilliant Photo|spyware
+com.whddhd.fancyphoto|FancyPhoto|spyware
+com.whddhd.pixeditor|PixEditor|spyware
+com.whtrack.monit|AndroidPolice|stalkerware
+com.wifi0|SpyLive360|stalkerware
+com.wifiset.service|HelloSpy|stalkerware
+com.wifiset.service|Wi-Fi Settings|stalkerware
+com.wifisettings.service|1TopSpy|stalkerware
+com.wifisettings.service|HelloSpy|stalkerware
+com.willowpena.fiestraphotoeditor|Piestra - Comic & Blend Effect|spyware
+com.wilmaarnold.kutsalsaglik|Smart PDF Reader and Editor|spyware
+com.wisemo.host.v10|WiseMo|stalkerware
+com.wisemo.wsmguest.v18|Unknown|stalkerware
+com.wisemo.wsmguest.v18|WiseMo|stalkerware
+com.wlset.info|PhoneSpy|stalkerware
+com.wlset.info|Unknown|stalkerware
+com.woman.sport.Female.fitness.net|Female Fitness|spyware
+com.workout.play.goal.fitness|Workout Pro|spyware
+com.ws.scli|Cocospy|stalkerware
+com.ws.sc|Cocospy|stalkerware
+com.ws.sc|System Update Service|stalkerware
+com.wtspy.apps|WtSpy|stalkerware
+com.ww.companion|AndroidPolice|stalkerware
+com.ww.companion|Atic|stalkerware
+com.wwtspy|WtSpy|stalkerware
+com.wwxd.toolkit|Toolkit|spyware
+com.wzogle.zndroid.yacfup|AndroidPolice|stalkerware
+com.wzogle.zndroid.yacfup|Kurulum|stalkerware
+com.xcar.highwayrace.ds|Xcar Highway Race|spyware
+com.xevaphoto.cartoonion|Xeva Photo Cartoon|spyware
+com.xhunter.client|Unknown|stalkerware
+com.xhunter.client|xHunter|stalkerware
+com.xingx.gifimage|GIFs-Search Animated GIF & Stickers|spyware
+com.xinx.apls|2021 MagicCamPlus|spyware
+com.xinxin.anjoyartphoto|Enjoy Art Photo|spyware
+com.xno.systemservice|Xnore|stalkerware
+com.xnspy.dashboard|XNSpy|stalkerware
+com.xonasounds.relaxing|Xona Relaxing Sounds|spyware
+com.xooil.elzup|MAGIC PHOTO PUZZLE|spyware
+com.young.photoeditor.cartooneditorapp|Cartoon Effects Photo Editor|spyware
+com.yunlinan.photoeditorwall|Photo Editor Wall|spyware
+com.yurpdpvxnybmlgh|SpyHuman|stalkerware
+com.yvpnproxy.freemaster|Y VPN Master|spyware
+com.zkftwsel.fqnoquuv|AndroidPolice|stalkerware
+com.zkftwsel.fqnoquuv|KidLogger|stalkerware
+com.zoomate.vpn.proxy.free|ZooMate VPN Proxy|spyware
+core.framework|celSpy|stalkerware
+core.framework|mSpy|stalkerware
+core.update.framework|celSpy|stalkerware
+core.update.framework|mSpy|stalkerware
+crash.vila.touch.game|Vilatouch crash game|spyware
+crash.vltcar.fungame.app|Vilatouch crash car|spyware
+cybrook.trackview|TrackView|stalkerware
+dell.scream.application|Scream|stalkerware
+dell.scream.application|SpyNote|stalkerware
+edu.virginia.cs.cs4720.ispy|ISpy|stalkerware
+edu.virginia.cs.cs4720.ispy|Unknown|stalkerware
+efexmsz.mzuooelftl|AndroidPolice|stalkerware
+efexmsz.mzuooelftl|MonitorChecker / AndrMonitor / AndroidMon / Dromon|stalkerware
+efexmsz.mzuooelftl|MonitorChecker|stalkerware
+fka.ugsonrqogw|AndroidPolice|stalkerware
+fod.loqpf|AndroidPolice|stalkerware
+fod.loqpf|MonitorChecker|stalkerware
+fpsgame.olshooter.threed.app|Online Shooter FPS|spyware
+free.music.download.search.mp3.song.online.player|Free Music Downloader & Music Player|spyware
+ftp.bomcarcing.crashcars|Crash Racing Game|spyware
+ftp.camfilter.lovebeauty|Beauty Camera Filter|spyware
+ftp.firattck.fpsgame|Action Flame FPS|spyware
+ftp.piaoyi.racegames|Drift Sprint Racing Game|spyware
+ftp.raceranger.gamepp|CityRanger Racing Game|spyware
+funcam.fredonm.app|Thefun Camera|spyware
+g.google.llc|MobileTrackerFree|stalkerware
+game.deserthuting.app|Desert Hunting Game|spyware
+game.trytospin.nipsotyrtll|Try to spin|spyware
+googlesettings.setting|1TopSpy|stalkerware
+googlesettings.setting|HelloSpy|stalkerware
+ifk.ghumlh|AndroidPolice|stalkerware
+ifk.ghumlh|MonitorChecker|stalkerware
+iiw.orqjtwbkx|AndroidPolice|stalkerware
+iiw.orqjtwbkx|MonitorChecker / AndrMonitor / AndroidMon / Dromon|stalkerware
+iiw.orqjtwbkx|MonitorChecker|stalkerware
+in.servidor.service|MeuSpy|stalkerware
+in.spyapp.patanjali.android|PatanSpyApp|stalkerware
+in.spyapp.patanjali.android|Unknown|stalkerware
+inc.imonitor|iMonitorSpy|stalkerware
+iqual.calculadora.pro|SpyMasterPro|stalkerware
+ir.spy24.updater|Spy24|stalkerware
+ir.spy24.wifi|Spy24|stalkerware
+kenkbltcf.pwpwkvdwmjk|AndroidPolice|stalkerware
+kenkbltcf.pwpwkvdwmjk|MonitorChecker|stalkerware
+lookOut.Secure|MobiStealth|stalkerware
+lunarzodiacg.besthoro|Lunar Zodiac Horoscope|spyware
+m.mob.control|MobileTrackerFree|stalkerware
+m.mob.service2020|MobileTrackerFree|stalkerware
+m.mobile.control|SpyHuman|stalkerware
+m.phone.control2020|MobileTrackerFree|stalkerware
+m.protect.children|MobileTrackerFree|stalkerware
+m.protect.parental|MobileTrackerFree|stalkerware
+m.secu.children|MobileTrackerFree|stalkerware
+m.security.parental|MobileTrackerFree|stalkerware
+me.hawkshaw|AndroidSpyApp|stalkerware
+me.hawkshaw|Unknown|stalkerware
+med.mspy.mspy|celSpy|stalkerware
+med.mspy.mspy|mSpy|stalkerware
+media.callshow.vc.flash|Callshow Flash|spyware
+media.grape.sdhnt.player|Grape Media Player|spyware
+media.tean.music.appx|Tean Music Player|spyware
+mg.locations.track5|OneLocator|stalkerware
+mhu.bylbcwc|AndroidPolice|stalkerware
+mhu.bylbcwc|MonitorChecker|stalkerware
+mob.protect.children|MobileTrackerFree|stalkerware
+mob.service.parental2020|MobileTrackerFree|stalkerware
+mobile.controlparental2020|MobileTrackerFree|stalkerware
+mobile.monitor.child2021|MobileTrackerFree|stalkerware
+mobile.monitor.child2022|MobileTrackerFree|stalkerware
+mobile.monitor.child2023|MobileTrackerFree|stalkerware
+mobile.monitor.child2034|MobileTrackerFree|stalkerware
+mobile.parental2021|MobileTrackerFree|stalkerware
+mobile.protect.children2020|MobileTrackerFree|stalkerware
+mobile.protect.children|MobileTrackerFree|stalkerware
+muscle.loseweight.fitness.fatburning.exercise|Male Fitness 2020|spyware
+net.androidcoreapp.androidbackup|Reptilicus|stalkerware
+net.coolware.smart.camera.ultra|2022 Ultra Camera|spyware
+net.cybrook.trackvieo|TrackView|stalkerware
+net.cybrook.trackviep|TrackView|stalkerware
+net.cybrook.trackvieq|TrackView|stalkerware
+net.cybrook.trackvier|TrackView|stalkerware
+net.cybrook.trackvies|TrackView|stalkerware
+net.cybrook.trackviet|TrackView|stalkerware
+net.cybrook.trackvieu|TrackView|stalkerware
+net.cybrook.trackviev|TrackView|stalkerware
+net.cybrook.trackview|Family Locator and Monitor - TrackView|stalkerware
+net.cybrook.trackview|TrackView|stalkerware
+net.cybrook.trackviex|TrackView|stalkerware
+net.cybrook.trackviey|TrackView|stalkerware
+net.cybrook.trackviez|TrackView|stalkerware
+net.cybrook.trustserv|TrackView|stalkerware
+net.delphiboardlayer.androidcoreapp|Reptilicus|stalkerware
+net.droid.talk218|Ahmyth|stalkerware
+net.droid.talk218|Unknown|stalkerware
+net.fpsol.shooters|Code Name-Vulture FPS OL|spyware
+net.homesafe|TrackView|stalkerware
+net.kanvpn.fastspeed|Kangaroo Fast VPN|spyware
+net.kidlogger.kidlogger|AndroidPolice|stalkerware
+net.kidlogger.kidlogger|KidLogger|stalkerware
+net.majorkernelpanic.spydroid|SpyDroid|stalkerware
+net.majorkernelpanic.spydroid|Unknown|stalkerware
+net.musicesapp.player|Muses Music Player|spyware
+net.red.pi.fashion.camera|Red Camera|spyware
+net.reptilicus.clientapp|Reptilicus|stalkerware
+net.snaphdphotoeditorapp.ishscsnaphdphotoeditor|Snap: HD Photo Editor|spyware
+net.someapp1.somecorp2|AndroidPolice|stalkerware
+net.someapp1.somecorp2|KidLogger|stalkerware
+net.spy24.wifi|Spy24|stalkerware
+net.ssonn.boomrace|Lightning Drift Racing|spyware
+net.sweetplus.camx|One-Sweet Camera|spyware
+net.system_updater_abs341|Reptilicus|stalkerware
+net.teecho.camche.camera|Baby Camera|spyware
+net.teslineservice.kidl5|AndroidPolice|stalkerware
+net.teslineservice.kidl5|KidLogger|stalkerware
+net.trackview.pro|TrackView|stalkerware
+net.trackview|TrackView|stalkerware
+net.vkurhandler|Reptilicus|stalkerware
+niko.ldali.batter|BatterySafe|spyware
+ns.antapp.module|NeoSpy|stalkerware
+one.enix.smsforward|SMForw|stalkerware
+one.enix.smsforward|SMSForward|stalkerware
+oo.ptkqyawh|AndroidPolice|stalkerware
+oo.ptkqyawh|MonitorChecker|stalkerware
+org.alltracker.security|AllTracker|stalkerware
+org.connecting.updived.hygeist.interplays|MobileTool|stalkerware
+org.crashmaster.funrace.aps|Crash Race Master|spyware
+org.donfan.player.app|Donfan Music Player|spyware
+org.findmykids.app|FindMyKids|stalkerware
+org.findmykids.child|FindMyKids|stalkerware
+org.findmykids.child|Unknown|stalkerware
+org.mumu.hdpalyer.apps|Mulu Music Player|spyware
+org.musinvshen.player|Musae Music Player|spyware
+org.nzombie.hutgame|Night Hunter Game|spyware
+org.poleward.burghs.hydrotherapy.homonymously|MobileTool|stalkerware
+org.secure.smsgps|AutoForward|stalkerware
+org.secure.smsgps|HighsterMobile|stalkerware
+org.skysound.music.player|Teana Music Player|spyware
+org.svpn.goatsheep|Goat Safe VPN|spyware
+org.system.kernel|OwnSpy|stalkerware
+org.traccar.client.hidden|Traca|stalkerware
+org.traccar.client.hidden|Traccar|stalkerware
+org.traccar.client|Traccar|stalkerware
+org.urates.amirates.suffocate.chiliast|MobileTool|stalkerware
+org.zipaimei.camfilter|SnapBeauty Cam Filter|spyware
+phone.Secure|MobiStealth|stalkerware
+pl.lidwin.letmespy2|LetMeSpy|stalkerware
+pl.lidwin.letmespy3|LetMeSpy|stalkerware
+pl.lidwin.letmespy4|LetMeSpy|stalkerware
+pl.lidwin.letmespy5|LetMeSpy|stalkerware
+pl.lidwin.letmespy|LetMeSpy|stalkerware
+pl.lidwin.lms|LetMeSpy|stalkerware
+pl.lidwin.remote1|LetMeSpy|stalkerware
+pl.lidwin.remote2|LetMeSpy|stalkerware
+pl.lidwin.remote|LetMeSpy|stalkerware
+pl.radeal.lms4|LetMeSpy|stalkerware
+pl.spyone.agent2|Spyone|stalkerware
+player.mmm.mediapp.otrs|Mostfun Media Music|spyware
+player.pinol.enoyend|OseaCamera|spyware
+player.pmte.nfyti.media|Pomelo Music Player|spyware
+player.seashel.loud.media|Sealod Music Player|spyware
+player.shellvoice.app|SeaShell Music Player|spyware
+proflash.flash.com|ProFlash|spyware
+program.data.agus.dat|Kite camera|spyware
+race.apex.accre.game|Apex Crash Race|spyware
+ru.usafe.kid.unisafekids|Unisafe|stalkerware
+ru.usafe.u_safe|Unisafe|stalkerware
+ru.usafe.usafe|Unisafe|stalkerware
+se.vkur.clientapp|Reptilicus|stalkerware
+seC.fqjx.sqBB|OneMonitar|stalkerware
+seC.fqjx.sqBB|OneSpy|stalkerware
+security.mobile.parental|MobileTrackerFree|stalkerware
+service.download.app|MobileTrackerFree|stalkerware
+solo.impostormaster.kill|Impostor Master Solo Kill 2021|spyware
+spdcar.gamedrag.racgame.app|Instant Drag Speed Racing|spyware
+sped.racear.game.plusx|Extreme Speed Race|spyware
+stealthLight.sys|MobiStealth|stalkerware
+su.unisafe.unisafe|Unisafe|stalkerware
+sy.slvzccd|AndroidPolice|stalkerware
+sy.slvzccd|MonitorChecker|stalkerware
+sys.framework|Update service|stalkerware
+system.framework|celSpy|stalkerware
+system.framework|mSpy|stalkerware
+t.tools.app|TalkLog|stalkerware
+tech.logsettings|TalkLog|stalkerware
+technic.settings|TalkLog|stalkerware
+tej.flashkeyloggerpro|FlashKeylogger|stalkerware
+tej.flashkeyloggerpro|FlashKeylog|stalkerware
+tej.flashkeylogger|FlashKeylogger|stalkerware
+tej.flashkeylogges|FlashKeylogger|stalkerware
+tej.flashkeylogges|FlashKeylog|stalkerware
+tracker.mob.gps|MobileTrackerFree|stalkerware
+tv.familynk|TrackView|stalkerware
+tv.familynl|TrackView|stalkerware
+update.service.android.installer|mSpy|stalkerware
+update.service.android|mSpy|stalkerware
+us.trackview|TrackView|stalkerware
+vmf.uxytqgrl|AndroidPolice|stalkerware
+vmf.uxytqgrl|MonitorChecker|stalkerware
+vn.ehkfqgvn|AndroidPolice|stalkerware
+vn.ehkfqgvn|MonitorChecker|stalkerware
+whsmy.blod.sper|NoneCanDie|spyware
+wifi.manager|Spy99|stalkerware
+win.bestrace.threed.game|City Crash Racing Game|spyware
+win.calshow.zzplus.app|Callpaper Show|spyware
+win.hapsunday.mplayer|Sunday Media Player|spyware
+win.hoomhom.fpsgame|Flame Shock FPS|spyware
+win.modoen.time.camer|Modern Time Camera|spyware
+win.smartgame.sortpuz.app|Rainbow Square- Sort Puzzle|spyware
+win.tebag.camap|Tea Bag Camera|spyware
+wosc.cwf2|CatWatchful|stalkerware
+wosc.cwf|CatWatchful|stalkerware
+xd.spy.app|Unknown|stalkerware
+xd.spy.app|XDSpy|stalkerware
+yc.sysupd.client|Reptilicus|stalkerware
+yogaworkouts.dailyyoga.yogafitness|MobileTrackerFree|stalkerware
+yr.tubjypbl|AndroidPolice|stalkerware
+yr.tubjypbl|MonitorChecker|stalkerware

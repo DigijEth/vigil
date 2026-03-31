@@ -1,0 +1,7 @@
+*.log
+*.pid
+*.bak
+*.tmp
+*.swp
+*.zip
+build/
