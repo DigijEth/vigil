@@ -113,11 +113,18 @@ main() {
         log INFO "Forensic Shield PID: $!"
     fi
 
-    # 2. SMS Shield (continuous logcat monitoring)
+    # 2. SMS Shield (continuous logcat monitoring + silent install blocking)
     if [ "${SMS_SHIELD_ENABLED:-1}" = "1" ] && [ "${SMS_SILENT_DETECT:-1}" = "1" ]; then
         log INFO "Starting SMS Shield monitor..."
         "$VIGIL_LIB/sms_shield.sh" monitor >> "$VIGIL_LOG" 2>&1 &
         log INFO "SMS Shield PID: $!"
+    fi
+
+    # 2b. Silent install blocker (global package install monitor)
+    if [ "${SMS_BLOCK_SILENT_INSTALL:-1}" = "1" ]; then
+        log INFO "Starting silent install blocker..."
+        "$VIGIL_LIB/sms_shield.sh" monitor-installs >> "$VIGIL_LOG" 2>&1 &
+        log INFO "Install Blocker PID: $!"
     fi
 
     # 3. Network Monitor (continuous connection watching)

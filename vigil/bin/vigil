@@ -198,7 +198,8 @@ cmd_forensic() {
 cmd_sms() {
     check_module
     local subcmd="${1:-status}"
-    "$VIGIL_LIB/sms_shield.sh" "$subcmd"
+    shift 2>/dev/null
+    "$VIGIL_LIB/sms_shield.sh" "$subcmd" "$@"
 }
 
 cmd_network() {
@@ -286,8 +287,8 @@ cmd_help() {
     echo "                      FrostGuard file integrity operations"
     echo "  forensic [scan|status]"
     echo "                      Forensic Shield (anti-Cellebrite)"
-    echo "  sms [monitor|analyze|status]"
-    echo "                      SMS Shield (silent SMS detection)"
+    echo "  sms [monitor|analyze|setup-quarantine|sandbox-messages|status]"
+    echo "                      SMS Shield + silent install blocker + quarantine"
     echo "  honeypot [monitor|spoof|spoof-at|stop|status]"
     echo "                      SMS Honeypot (fake GPS on silent SMS)"
     echo "  app [audit|revoke|sandbox|feed|auto|status]"
