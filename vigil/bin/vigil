@@ -227,6 +227,12 @@ cmd_deep_scan() {
     "$VIGIL_LIB/deep_scan.sh" deep
 }
 
+cmd_webui() {
+    check_module
+    echo "Starting Vigil WebUI on http://localhost:${WEBUI_PORT:-8088}"
+    "$VIGIL_LIB/webui.sh" serve
+}
+
 cmd_harden() {
     check_module
     local subcmd="${1:-harden}"
@@ -298,6 +304,9 @@ cmd_help() {
     echo "  duress [setup|status]"
     echo "                      Duress/panic trigger configuration"
     echo ""
+    echo "${BOLD}Dashboard${NC}"
+    echo "  webui               Start WebUI dashboard (localhost:8088)"
+    echo ""
     echo "${BOLD}Maintenance${NC}"
     echo "  update-ioc          Update threat indicator database"
     echo "  version             Show version"
@@ -328,6 +337,7 @@ case "$1" in
     app)          shift; cmd_app_honeypot "$@" ;;
     network)      shift; cmd_network "$@" ;;
     duress)       shift; cmd_duress "$@" ;;
+    webui)        cmd_webui ;;
     log)          shift; cmd_log "$@" ;;
     version)      echo "Vigil v${VERSION}" ;;
     help|--help|-h|"") cmd_help ;;

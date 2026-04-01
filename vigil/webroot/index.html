@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vigil — Anti-Surveillance Shield</title>
+<style>
+:root{--bg:#0a0a0f;--s:#12121a;--s2:#1a1a25;--b:#2a2a3a;--t:#e0e0e8;--t2:#8888a0;--a:#4a9eff;--g:#22c55e;--y:#eab308;--r:#ef4444;--o:#f97316}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:'SF Mono','Cascadia Code','Fira Code',monospace;background:var(--bg);color:var(--t);min-height:100vh;font-size:14px}
+.c{max-width:900px;margin:0 auto;padding:16px}
+.hdr{text-align:center;padding:24px 0 16px;border-bottom:1px solid var(--b);margin-bottom:20px}
+.hdr h1{font-size:22px;font-weight:600;letter-spacing:2px}
+.hdr .sub{color:var(--t2);font-size:12px;margin-top:4px}
+.hdr .ver{color:var(--a);font-size:11px}
+.sb{display:flex;gap:12px;margin-bottom:20px;flex-wrap:wrap}
+.sc{display:flex;align-items:center;gap:6px;background:var(--s);border:1px solid var(--b);border-radius:6px;padding:8px 14px;font-size:12px;flex:1;min-width:140px}
+.sd{width:8px;height:8px;border-radius:50%;flex-shrink:0}
+.sd.on{background:var(--g);box-shadow:0 0 6px var(--g)}.sd.off{background:var(--r)}
+.cd{background:var(--s);border:1px solid var(--b);border-radius:8px;margin-bottom:16px;overflow:hidden}
+.ch{display:flex;justify-content:space-between;align-items:center;padding:12px 16px;border-bottom:1px solid var(--b);background:var(--s2);cursor:pointer;user-select:none}
+.ch h2{font-size:14px;font-weight:600}
+.cb{padding:16px}.cb.h{display:none}
+.mg{display:grid;grid-template-columns:repeat(auto-fill,minmax(240px,1fr));gap:10px}
+.mi{display:flex;justify-content:space-between;align-items:center;padding:10px 14px;background:var(--s2);border-radius:6px;border:1px solid var(--b)}
+.mn{font-size:13px}
+.tg{position:relative;width:40px;height:22px;background:#333;border-radius:11px;cursor:pointer;transition:background .2s;border:none;outline:none}
+.tg.on{background:var(--g)}
+.tg::after{content:'';position:absolute;top:3px;left:3px;width:16px;height:16px;background:#fff;border-radius:50%;transition:transform .2s}
+.tg.on::after{transform:translateX(18px)}
+.ig{display:grid;grid-template-columns:repeat(auto-fill,minmax(110px,1fr));gap:8px}
+.is{text-align:center;padding:12px 8px;background:var(--s2);border-radius:6px}
+.is .n{font-size:20px;font-weight:700;color:var(--a)}.is .l{font-size:10px;color:var(--t2);margin-top:4px;text-transform:uppercase}
+.al{max-height:300px;overflow-y:auto}
+.ai{display:flex;gap:10px;padding:8px 0;border-bottom:1px solid var(--b);font-size:12px;align-items:flex-start}
+.ai:last-child{border:none}
+.sv{font-size:10px;font-weight:700;padding:2px 6px;border-radius:3px;flex-shrink:0;white-space:nowrap}
+.sv.CRITICAL{background:var(--r);color:#fff}.sv.HIGH{background:var(--o);color:#fff}.sv.MEDIUM{background:var(--y);color:#000}.sv.LOW{background:var(--t2);color:#fff}.sv.INFO{background:var(--a);color:#fff}
+.at{color:var(--t2);white-space:nowrap;font-size:11px}.am{color:var(--t);word-break:break-word}
+.br{display:flex;gap:8px;flex-wrap:wrap;margin-top:12px}
+.bt{padding:8px 16px;border:1px solid var(--b);border-radius:6px;background:var(--s2);color:var(--t);font-family:inherit;font-size:12px;cursor:pointer;transition:all .15s;outline:none}
+.bt:hover{background:var(--b)}.bt:active{transform:scale(.97)}
+.bt.d{border-color:var(--r);color:var(--r)}.bt.d:hover{background:var(--r);color:#fff}
+.bt.p{border-color:var(--a);color:var(--a)}.bt.p:hover{background:var(--a);color:#fff}
+.bt.g{border-color:var(--g);color:var(--g)}.bt.g:hover{background:var(--g);color:#fff}
+.bt.ld{opacity:.5;pointer-events:none}
+.lv{background:#000;border-radius:6px;padding:12px;max-height:250px;overflow-y:auto;font-size:11px;line-height:1.5;color:var(--t2);white-space:pre-wrap;word-break:break-all}
+.sr{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--b)}
+.sr:last-child{border:none}
+.sl{font-size:13px}.sd2{font-size:11px;color:var(--t2)}
+.si{background:var(--s2);border:1px solid var(--b);border-radius:4px;color:var(--t);padding:4px 8px;font-family:inherit;font-size:12px;width:140px;text-align:right;outline:none}
+.si:focus{border-color:var(--a)}
+.toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:var(--s2);border:1px solid var(--a);color:var(--t);padding:10px 20px;border-radius:8px;font-size:13px;z-index:999;opacity:0;transition:opacity .3s;pointer-events:none}
+.toast.show{opacity:1}
+@media(max-width:500px){.mg{grid-template-columns:1fr}.ig{grid-template-columns:repeat(3,1fr)}.sb{flex-direction:column}}
+</style>
+</head>
+<body>
+<div class="c">
+  <div class="hdr">
+    <h1>VIGIL</h1>
+    <div class="sub">Anti-Surveillance Shield by Setec Labs</div>
+    <div class="ver">v0.2.0</div>
+  </div>
+  <div class="sb">
+    <div class="sc"><span class="sd" id="dd"></span><span id="dt">Checking...</span></div>
+    <div class="sc"><span class="sd" id="ld"></span><span id="lt">Checking...</span></div>
+  </div>
+
+  <div class="cd"><div class="ch" onclick="tc(this)"><h2>Quick Actions</h2><span>&#9660;</span></div>
+  <div class="cb"><div class="br">
+    <button class="bt p" onclick="run('scanner.sh quick',this)">Quick Scan</button>
+    <button class="bt p" onclick="run('deep_scan.sh deep',this)">Deep Scan</button>
+    <button class="bt g" onclick="run('antiforensics.sh harden',this)">Harden</button>
+    <button class="bt" onclick="run('antiforensics.sh sanitize',this)">Sanitize</button>
+    <button class="bt" onclick="run('ioc_updater.sh update',this)">Update IOCs</button>
+    <button class="bt" onclick="run('integrity.sh verify',this)">Check Integrity</button>
+    <button class="bt d" onclick="if(confirm('Enter BFU lockdown? Reboot to restore.'))run('key_wiper.sh lockdown',this)">LOCKDOWN</button>
+  </div></div></div>
+
+  <div class="cd"><div class="ch" onclick="tc(this)"><h2>Protection Modules</h2><span>&#9660;</span></div>
+  <div class="cb" id="mb"></div></div>
+
+  <div class="cd"><div class="ch" onclick="tc(this)"><h2>Threat Database</h2><span>&#9660;</span></div>
+  <div class="cb" id="ib"></div></div>
+
+  <div class="cd"><div class="ch" onclick="tc(this)"><h2>Recent Alerts</h2><span>&#9660;</span></div>
+  <div class="cb"><div class="al" id="al"></div></div></div>
+
+  <div class="cd"><div class="ch" onclick="tc(this)"><h2>Settings</h2><span>&#9660;</span></div>
+  <div class="cb h" id="stb"><div id="stl"></div><div class="br"><button class="bt p" onclick="saveCfg(this)">Save Settings</button></div></div></div>
+
+  <div class="cd"><div class="ch" onclick="tc(this)"><h2>System Log</h2><span>&#9660;</span></div>
+  <div class="cb h" id="lb"><div class="lv" id="lv">Loading...</div><div class="br"><button class="bt" onclick="loadLog()">Refresh</button></div></div></div>
+</div>
+<div class="toast" id="toast"></div>
+
+<script>
+const D='/data/adb/vigil';
+const L='/data/adb/modules/vigil/vigil/lib';
+const isKSU=typeof ksu!=='undefined';
+
+async function ex(cmd){
+  if(isKSU){
+    try{const r=await ksu.exec(cmd);return (r&&(r.output||r.stdout))||''}catch(e){return ''}
+  }else{
+    try{const r=await fetch('/api/exec',{method:'POST',body:cmd});return await r.text()}catch(e){return ''}
+  }
+}
+function toast(m){const t=document.getElementById('toast');t.textContent=m;t.classList.add('show');setTimeout(()=>t.classList.remove('show'),2500)}
+function tc(h){h.nextElementSibling.classList.toggle('h')}
+async function run(s,b){
+  const lbl=b?b.textContent:'';
+  if(b){b.classList.add('ld');b.textContent='Running...';}
+  toast('Running '+s.split('.')[0]+'...');
+  await ex(L+'/'+s+' 2>&1');
+  if(b){b.classList.remove('ld');b.textContent=lbl;}
+  toast('Done');loadStatus();loadAlerts();
+}
+
+const MODS={
+  SCANNER_ENABLED:{l:'Threat Scanner',d:'1'},
+  FROSTGUARD_ENABLED:{l:'FrostGuard (Integrity)',d:'1'},
+  FORENSIC_SHIELD_ENABLED:{l:'Forensic Shield',d:'1'},
+  SMS_SHIELD_ENABLED:{l:'SMS Shield',d:'1'},
+  NETWORK_MONITOR_ENABLED:{l:'Network Monitor',d:'1'},
+  KEYWIPER_ENABLED:{l:'Key Wiper',d:'1'},
+  DEEP_SCAN_BACKGROUND:{l:'Deep Forensic Scan',d:'1'},
+  ANTIFORENSICS_ENABLED:{l:'Anti-Forensics',d:'1'},
+  DURESS_ENABLED:{l:'Duress / Panic',d:'0'},
+  SMS_FAKE_RESPONSE:{l:'SMS Honeypot',d:'0'},
+  APP_HONEYPOT_AUTO:{l:'App Honeypot',d:'0'},
+  QUARANTINE_ENABLED:{l:'Quarantine',d:'0'},
+  SMS_BLOCK_SILENT_INSTALL:{l:'Silent Install Block',d:'1'},
+  WEBUI_ENABLED:{l:'WebUI Dashboard',d:'1'},
+};
+
+const SETS={
+  SCANNER_INTERVAL:{l:'Scan Interval (sec)',d:'Time between auto scans'},
+  FROSTGUARD_INTERVAL:{l:'Integrity Check (sec)',d:'Time between checks'},
+  IOC_UPDATE_INTERVAL:{l:'IOC Update (sec)',d:'Time between updates'},
+  WEBUI_PORT:{l:'WebUI Port',d:'Dashboard port'},
+  DURESS_ACTION:{l:'Duress Action',d:'lockdown / wipe-session / wipe'},
+  DURESS_PIN:{l:'Duress PIN',d:'PIN that triggers panic'},
+  VIGIL_BACKEND_URL:{l:'Backend URL',d:'Autarch server'},
+  VIGIL_API_KEY:{l:'API Key',d:'Autarch API key'},
+};
+
+let cfg={};
+
+async function loadCfg(){
+  const raw=await ex('cat '+D+'/vigil.conf 2>/dev/null');
+  cfg={};
+  raw.split('\n').forEach(line=>{
+    line=line.trim();if(!line||line[0]==='#')return;
+    const i=line.indexOf('=');if(i<0)return;
+    const k=line.substring(0,i).trim();
+    let v=line.substring(i+1).trim().replace(/^["']|["']$/g,'').replace(/\s*#.*$/,'');
+    cfg[k]=v;
+  });
+}
+
+function gc(k,d){return cfg[k]!==undefined?cfg[k]:d}
+async function sc(k,v){cfg[k]=v;await ex("sed -i 's|^"+k+"=.*|"+k+"="+v+"|' "+D+"/vigil.conf")}
+
+async function loadStatus(){
+  await loadCfg();
+  const pid=(await ex('cat '+D+'/vigild.pid 2>/dev/null')).trim();
+  const running=pid&&(await ex('kill -0 '+pid+' 2>/dev/null&&echo y')).trim()==='y';
+  document.getElementById('dd').className='sd '+(running?'on':'off');
+  document.getElementById('dt').textContent=running?'Daemon: PID '+pid:'Daemon: stopped';
+  const lk=(await ex('[ -f '+D+'/.lockdown ]&&echo y')).trim()==='y';
+  document.getElementById('ld').className='sd '+(lk?'off':'on');
+  document.getElementById('lt').textContent=lk?'LOCKDOWN ACTIVE':'Normal';
+
+  let h='<div class="mg">';
+  for(const[k,m]of Object.entries(MODS)){
+    const on=gc(k,m.d)==='1';
+    h+='<div class="mi"><span class="mn">'+m.l+'</span><button class="tg '+(on?'on':'')+'" onclick="tmod(this,\''+k+'\','+on+')"></button></div>';
+  }
+  document.getElementById('mb').innerHTML=h+'</div>';
+}
+
+async function tmod(el,k,cur){
+  const v=cur?'0':'1';await sc(k,v);el.classList.toggle('on');
+  toast(MODS[k].l+': '+(v==='1'?'ON':'OFF'));
+}
+
+async function loadIOC(){
+  const files=['packages','certificates','domains','ips','hashes','cellebrite_hashes','hosts'];
+  let h='<div class="ig">',tot=0;
+  for(const f of files){
+    const n=parseInt((await ex('wc -l<'+D+'/'+f+'.txt 2>/dev/null||echo 0')).trim())||0;
+    tot+=n;h+='<div class="is"><div class="n">'+n.toLocaleString()+'</div><div class="l">'+f.replace(/_/g,' ')+'</div></div>';
+  }
+  document.getElementById('ib').innerHTML='<div class="ig"><div class="is"><div class="n">'+tot.toLocaleString()+'</div><div class="l">Total IOCs</div></div>'+h.replace('<div class="ig">','')+'</div>';
+}
+
+async function loadAlerts(){
+  const raw=await ex('tail -50 '+D+'/alerts/history 2>/dev/null');
+  const el=document.getElementById('al');
+  if(!raw.trim()){el.innerHTML='<div style="color:var(--g);padding:8px">No alerts</div>';return}
+  el.innerHTML=raw.trim().split('\n').reverse().map(line=>{
+    const p=line.split('|');if(p.length<4)return'';
+    const[sev,ts,mod,...mp]=p;const msg=mp.join('|');
+    const d=new Date(parseInt(ts)*1000);
+    const time=d.toLocaleDateString('en',{month:'short',day:'numeric'})+' '+d.toLocaleTimeString('en',{hour:'2-digit',minute:'2-digit'});
+    return'<div class="ai"><span class="sv '+sev+'">'+sev+'</span><span class="at">'+time+'</span><span class="am">'+msg+'</span></div>';
+  }).join('');
+}
+
+async function loadSettings(){
+  await loadCfg();
+  let h='';
+  for(const[k,m]of Object.entries(SETS)){
+    h+='<div class="sr"><div><div class="sl">'+m.l+'</div><div class="sd2">'+m.d+'</div></div><input class="si" data-key="'+k+'" value="'+(gc(k,'')||'')+'"></div>';
+  }
+  document.getElementById('stl').innerHTML=h;
+}
+
+async function saveCfg(b){
+  if(b)b.classList.add('ld');
+  for(const inp of document.querySelectorAll('.si')){
+    const k=inp.dataset.key,v=inp.value;
+    if(v!==gc(k,''))await sc(k,v);
+  }
+  if(b)b.classList.remove('ld');
+  toast('Settings saved');
+}
+
+async function loadLog(){
+  const raw=await ex('tail -100 '+D+'/vigil.log 2>/dev/null');
+  const el=document.getElementById('lv');
+  el.textContent=raw||'No log data';
+  el.scrollTop=el.scrollHeight;
+}
+
+(async()=>{await loadStatus();await loadIOC();await loadAlerts();await loadSettings();setInterval(()=>{loadStatus();loadAlerts()},30000)})();
+</script>
+</body>
+</html>

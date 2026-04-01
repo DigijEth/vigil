@@ -167,7 +167,14 @@ main() {
         "$VIGIL_LIB/antiforensics.sh" harden >> "$VIGIL_LOG" 2>&1
     fi
 
-    # 9. Install network blocklists
+    # 9. WebUI dashboard
+    if [ "${WEBUI_ENABLED:-1}" = "1" ]; then
+        log INFO "Starting WebUI on port ${WEBUI_PORT:-8088}..."
+        "$VIGIL_LIB/webui.sh" serve >> "$VIGIL_LOG" 2>&1 &
+        log INFO "WebUI PID: $!"
+    fi
+
+    # 10. Install network blocklists
     if [ "${NETWORK_BLOCK_C2:-1}" = "1" ] || [ "${NETWORK_BLOCK_TRACKERS:-1}" = "1" ]; then
         log INFO "Installing network blocklists..."
         "$VIGIL_LIB/network_monitor.sh" install >> "$VIGIL_LOG" 2>&1
