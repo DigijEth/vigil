@@ -1,7 +1,7 @@
 id=vigil
 name=Vigil — Anti-Surveillance Shield
-version=v0.2.0
-versionCode=2
+version=v0.3.0
+versionCode=3
 author=Setec Labs
 description=Anti-surveillance, anti-stalkerware, and anti-forensic protection for journalists, activists, and at-risk users. Detects Pegasus, stalkerware, IMSI catchers, silent SMS, forensic extraction tools, and more.
 updateJson=
